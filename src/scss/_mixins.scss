@@ -1,0 +1,39 @@
+@mixin font-face($name, $path, $weight: null, $style: null, $exts: eot woff2 woff ttf svg, $display: auto) {
+	$src: null;
+
+	$extmods: (
+		eot: "?",
+		svg: "#" + str-replace($name, " ", "_")
+	);
+
+	$formats: (
+		otf: "opentype",
+		ttf: "truetype"
+	);
+
+	@each $ext in $exts {
+		$extmod: if(map-has-key($extmods, $ext), $ext + map-get($extmods, $ext), $ext);
+		$format: if(map-has-key($formats, $ext), map-get($formats, $ext), $ext);
+		$src: append($src, url(quote($path + "." + $extmod)) format(quote($format)), comma);
+	}
+
+	@font-face {
+		font-family: quote($name);
+		font-style: $style;
+		font-weight: $weight;
+		src: $src;
+		font-display: $display;
+	}
+}
+
+@mixin shermans-laptop () {
+    @media (min-width: 1280px) and (min-resolution: 1.5dppx) {
+        @content;
+    }
+}
+
+@mixin angelines-laptop () {
+	@media (min-width: 1280px) and (max-width: 1440px) {
+        @content;
+    }
+}

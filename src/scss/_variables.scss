@@ -1,0 +1,52 @@
+// $blue: #0057C1;
+// $primary: $blue;
+// $secondary: #FFC335;
+$info: #EF4C29;
+
+// $blue-50: tint-color($blue, 95%);
+// $blue-100: tint-color($blue, 90%);
+
+$gray-100: #FAFAFA;
+$gray-200: #F2F2F2;
+$gray-300: #E6E6E6;
+$gray-600: #868991;
+$gray-700: #4B4E51;
+
+$body-color: $gray-700;
+
+// $font-size-base: 1.125rem;
+// $small-font-size: .875rem;
+// $font-family-sans-serif: 'Calibri', 'Segoe UI', 'Helvetica Nueue', system-ui, -apple-system, sans-serif;
+
+$font-weight-base: 400;
+$headings-font-weight: 700;
+$display-font-weight: 700;
+
+$btn-border-radius-sm: 1.25rem;
+$btn-border-radius: 1.5rem;
+$input-btn-font-size: 1.125rem;
+$input-btn-font-size-sm: 0.825rem;
+$input-btn-padding-x: 1.25rem;
+$input-border-color: transparent;
+// $input-bg: $blue-100;
+$btn-font-weight: 700;
+$btn-border-width: 2px;
+
+$input-border-radius: 0;
+$input-border-radius-sm: 0;
+$input-border-radius-lg: 0;
+
+$spacer: 1rem;
+$spacers: (
+  0: 0,
+  1: $spacer / 4,
+  2: $spacer / 2,
+  3: $spacer,
+  4: $spacer * 1.5,
+  5: $spacer * 3,
+  6: $spacer * 6,
+);
+$container-padding-x: 2rem;
+
+$card-border-radius: 0;
+$card-border-color: transparent;
