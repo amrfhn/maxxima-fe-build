@@ -1,17 +1,6 @@
 {% extends "@::templates/_layout.twig" %}
 
 {% block main %}
-    <h1>Hello world!</h1>
-    <p>This is a starter template that uses twig, see <a href="https://twig.symfony.com/doc/3.x/">https://twig.symfony.com/doc/3.x/</a></p>
-
-    {# To refer to an alias (see webpack.common.js), use ~ #}
-    <img class="mb-5" src="~@/assets/img/test.jpg" alt="">
-
-
-    <div class="mb-5 d-flex">
-        <p class="me-5">An Icon</p>
-        {% include "@::templates/components/icon.twig" with { iconName: 'check', iconSize: 'xxl' } %}
-    </div>
 
     {% include "@::templates/components/sample.twig" %}
 {% endblock %}

@@ -2,6 +2,8 @@
 @import "mixins";
 @import "fonts";
 @import "colors";
+@import "globals";
+
 
 // Vendor
 @import "~bootstrap/scss/bootstrap";
@@ -9,5 +11,11 @@
 
 // Components
 @import "./components/icon";
+@import "./components/buttons";
+@import "./components/navbar";
+@import "./components/footer";
+
+
+
 
 // Page Dependent CSS

@@ -1,6 +1,9 @@
-// $blue: #0057C1;
-// $primary: $blue;
-// $secondary: #FFC335;
+$red: #dd0000;
+$dark: #231f20;
+
+$primary: $red;
+$secondary: #6e6f71;
+
 $info: #EF4C29;
 
 // $blue-50: tint-color($blue, 95%);
@@ -12,7 +15,17 @@ $gray-300: #E6E6E6;
 $gray-600: #868991;
 $gray-700: #4B4E51;
 
-$body-color: $gray-700;
+$body-color: $dark;
+
+/** TYPOGRAPHY **/
+$font-family-base:              "NunitoSans";
+
+$font-weight-normal:            400;
+$font-weight-bold:              700;
+
+$headings-font-weight:          700;
+$headings-font-family:          "Quicksand";
+$headings-line-height:          1;
 
 // $font-size-base: 1.125rem;
 // $small-font-size: .875rem;

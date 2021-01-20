@@ -1,0 +1,31 @@
+header {
+	position: relative;
+	z-index: 1000;
+
+	.navbar {
+		height: 80px;
+		// position: fixed;
+		background-color: #fff;
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+		width: 100%;
+
+		.navbar-nav {
+			.nav-item {
+                .nav-link {
+                    padding: 8px 16px;
+                    color: $dark;
+                    font-weight: 700;
+                }
+				&.red-nav-item {
+					border-radius: 0.3rem;
+
+					.nav-link {
+						color: #fff;
+					}
+				}
+			}
+		}
+	}
+}

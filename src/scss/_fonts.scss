@@ -1,8 +1,8 @@
-// @include font-face ("Calibri", "../assets/fonts/Calibri-Light", 300, normal, woff woff2 ttf);
-// @include font-face ("Calibri", "../assets/fonts/Calibri-LightItalic", 300, italic, woff woff2 ttf);
+@include font-face ("NunitoSans", "../assets/fonts/NunitoSans-Light", 300, normal, ttf);
+@include font-face ("NunitoSans", "../assets/fonts/NunitoSans-LightItalic", 300, italic, ttf);
+@include font-face ("NunitoSans", "../assets/fonts/NunitoSans-Regular", 400, normal,ttf);
+@include font-face ("NunitoSans", "../assets/fonts/NunitoSans-Italic", 400, italic, ttf);
+@include font-face ("NunitoSans", "../assets/fonts/NunitoSans-Bold", 700, normal, ttf);
+@include font-face ("NunitoSans", "../assets/fonts/NunitoSans-BoldItalic", 700, italic, ttf);
 
-// @include font-face ("Calibri", "../assets/fonts/Calibri-Regular", 400, normal, woff woff2 ttf);
-// @include font-face ("Calibri", "../assets/fonts/Calibri-Italic", 400, italic, woff woff2 ttf);
-
-// @include font-face ("Calibri", "../assets/fonts/Calibri-Bold", 700, normal, woff woff2 ttf);
-// @include font-face ("Calibri", "../assets/fonts/Calibri-BoldItalic", 700, italic, woff woff2 ttf);
+@include font-face ("Quicksand", "../assets/fonts/Quicksand-Bold", 700, normal, ttf);

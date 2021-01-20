@@ -1,0 +1,10 @@
+.btn {
+    border-radius: 0.3rem;
+    font-size: 16px;
+
+    &.btn-primary {
+        color: $white;
+        min-width: 125px;
+        font-weight: 500;
+    }
+}
