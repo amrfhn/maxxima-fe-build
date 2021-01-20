@@ -2,29 +2,108 @@ header {
 	position: relative;
 	z-index: 1000;
 
+	.brand-logo {
+		width: 124px;
+
+		@include media-breakpoint-up(md) {
+			width: 250px;
+		}
+	}
+	.navbar-light {
+		.navbar-toggler {
+			border: none;
+			.icon {
+				width: 28px;
+				height: 24px;
+			}
+
+			&.close-icon {
+				position: absolute;
+				right: 30px;
+				top: 16px;
+			}
+
+			&:focus {
+				text-decoration: none;
+				outline: 0;
+				box-shadow: none;
+			}
+		}
+	}
+
 	.navbar {
-		height: 80px;
-		// position: fixed;
+		min-height: 60px;
 		background-color: #fff;
-		display: flex;
-		align-items: center;
-		justify-content: space-between;
 		width: 100%;
 
+		@include media-breakpoint-up(md) {
+			min-height: 97px;
+		}
 		.navbar-nav {
 			.nav-item {
-                .nav-link {
-                    padding: 8px 16px;
-                    color: $dark;
-                    font-weight: 700;
-                }
+				margin-left: 41px;
+
+				&:first-child {
+					@include media-breakpoint-up(md) {
+						margin-left: 0;
+					}
+				}
+				.nav-link {
+					padding: 10px 0px;
+					font-weight: 700;
+					color: #1a1a1a;
+					font-size: 18px;
+				}
 				&.red-nav-item {
 					border-radius: 0.3rem;
+					text-align: center;
+					width: 180px;
+					height: 48px;
+					margin-top: 10px;
+
+					@include media-breakpoint-up(md) {
+						width: 145px;
+						height: 48px;
+						margin-top: 0;
+					}
 
 					.nav-link {
 						color: #fff;
+						font-size: 14px;
+						padding: 13px 0;
+
+						@include media-breakpoint-up(md) {
+							font-size: 18px;
+							padding: 10px 0;
+						}
+
+						&:hover {
+							background-color: #bc0000;
+							border-radius: 0.3rem;
+						}
 					}
 				}
+			}
+		}
+	}
+
+	.navbar-collapse {
+		@include media-breakpoint-down(md) {
+			position: fixed;
+			top: 0;
+			z-index: 999;
+			background: #fff;
+			height: 100%;
+			right: 100%;
+			padding-left: 15px;
+			padding-right: 15px;
+			padding-bottom: 15px;
+			width: 100%;
+			transition: all 0.3s ease;
+			display: block;
+
+			&.show {
+				right: 0;
 			}
 		}
 	}
