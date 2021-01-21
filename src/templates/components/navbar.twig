@@ -13,14 +13,29 @@
 				{% include "@::templates/components/icon.twig" with { iconName: 'close', iconSize: '' } %}
 			</button>
 
-			<ul class="navbar-nav ms-auto mb-2 mt-md-0 mt-5 mb-lg-0">
-				<li class="nav-item"><a class="nav-link" href="#">Home</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">About Us</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Our Product</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Our Team</a></li>
-				<li class="nav-item"><a class="nav-link" href="#">Career</a></li>
-				<li class="nav-item red-nav-item bg-p1"><a class="nav-link" href="#">Contact Us</a></li>
+			<ul class="navbar-nav mx-auto d-flex justify-content-center mt-lg-0 mt-5">
+				<li class="nav-item">
+					<a class="nav-link active" aria-current="page" href="#home">Home</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#aboutUs">About Us</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#ourProduct">Our Product</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#ourTeam">Our Team</a>
+				</li>
+				<li class="nav-item">
+					<a class="nav-link" href="#career">Career</a>
+				</li>
 			</ul>
+			{# <li class="nav-item red-nav-item bg-p1">
+							<a class="nav-link" href="#">Contact Us</a>
+						</li> #}
+			<div class="nav-item mt-2 mt-lg-0">
+				<button class="btn btn-default btn-outline-primary">Contact Us</button>
+			</div>
 		</div>
 	</div>
 </nav>

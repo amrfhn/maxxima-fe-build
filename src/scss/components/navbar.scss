@@ -36,51 +36,55 @@ header {
 		background-color: #fff;
 		width: 100%;
 
-		@include media-breakpoint-up(md) {
+		@include media-breakpoint-up(lg) {
 			min-height: 97px;
 		}
-		.navbar-nav {
-			.nav-item {
-				margin-left: 41px;
+		.nav-item {
+			margin-left: 32px;
+			width: fit-content;
 
-				&:first-child {
-					@include media-breakpoint-up(md) {
-						margin-left: 0;
-					}
+			&:first-child {
+				@include media-breakpoint-up(lg) {
+					margin-left: 0;
 				}
-				.nav-link {
-					padding: 10px 0px;
-					font-weight: 700;
-					color: #1a1a1a;
-					font-size: 18px;
+			}
+			.nav-link {
+				margin-bottom: 10px;
+				padding: 10px 0 0;
+				font-weight: 700;
+				color: #1a1a1a;
+				font-size: 18px;
+
+				&.active {
+					border-bottom: 2px solid $red;
 				}
-				&.red-nav-item {
-					border-radius: 0.3rem;
-					text-align: center;
-					width: 180px;
+			}
+			&.red-nav-item {
+				border-radius: 0.3rem;
+				text-align: center;
+				width: 180px;
+				height: 48px;
+				margin-top: 10px;
+
+				@include media-breakpoint-up(lg) {
+					width: 145px;
 					height: 48px;
-					margin-top: 10px;
+					margin-top: 0;
+				}
 
-					@include media-breakpoint-up(md) {
-						width: 145px;
-						height: 48px;
-						margin-top: 0;
+				.nav-link {
+					color: #fff;
+					font-size: 14px;
+					padding: 13px 0;
+
+					@include media-breakpoint-up(lg) {
+						font-size: 18px;
+						padding: 10px 0;
 					}
 
-					.nav-link {
-						color: #fff;
-						font-size: 14px;
-						padding: 13px 0;
-
-						@include media-breakpoint-up(md) {
-							font-size: 18px;
-							padding: 10px 0;
-						}
-
-						&:hover {
-							background-color: #bc0000;
-							border-radius: 0.3rem;
-						}
+					&:hover {
+						background-color: #bc0000;
+						border-radius: 0.3rem;
 					}
 				}
 			}
@@ -88,7 +92,7 @@ header {
 	}
 
 	.navbar-collapse {
-		@include media-breakpoint-down(md) {
+		@include media-breakpoint-down(lg) {
 			position: fixed;
 			top: 0;
 			z-index: 999;
