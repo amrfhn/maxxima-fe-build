@@ -13,6 +13,7 @@
         xxl: 4rem,
         3xl: 5rem,
         4xl: 6rem,
+        5xl: 7rem,
     );
 
     @each $variant, $size in $sizes {

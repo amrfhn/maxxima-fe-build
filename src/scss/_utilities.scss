@@ -15,6 +15,18 @@
 	}
 }
 
+.display-4 {
+	font-size: 28px;
+	font-weight: 700;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 48px;
+	}
+}
+
 .lead {
 	font-size: 18px;
 }
+
+
+

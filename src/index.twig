@@ -4,4 +4,38 @@
 	<section id="home">
 		{% include "@::templates/components/video-banner.twig" %}
 	</section>
+
+	<section class="bg-gray-200" id="aboutUs">
+		<div class="pt-5 px-4">
+			<h3 class="display-4 text-center">WHY CHOOSE <span class="text-red">MAXXIMA</span></h3>
+			<p class="text-center lead">We are committed to paving new opportunities for people to live healthier and wealthier every day.</p>
+		</div>
+		<div class="container-fluid px-3 px-md-5 pt-4 pb-5">
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				<div class="col">
+					{% include "@::templates/components/card-v1.twig" with {
+                    icon: 'quality',
+                    cardTitle: 'High Quality Products',
+                    cardText: 'All products under MAXXIMA are developed together with numerous R&D teams around the globe and backed by clinically studies to ensure maximum levels of safety and effectiveness.'
+                } %}
+				</div>
+				<div class="col">
+					{% include "@::templates/components/card-v1.twig" with {
+                    icon: 'compensation',
+                    cardTitle: 'Consistent Compensation',
+                    cardText: 'Since MAXXIMA’s establishment in 2013, we have paid our business associates on a weekly basis, with the commissions totalling up to over RM100,000 million, to date. Our sound business model and compensation plan has positively transformed the lives of many financially.'
+                } %}
+				</div>
+				<div class="col">
+					{% include "@::templates/components/card-v1.twig" with {
+                    icon: 'support',
+                    cardTitle: 'Strong Support System',
+                    cardText: 'MAXXIMA is known for pushing the benchmarks of beauty and wellness, making us the talk of the town in the industry. Our efficient training and support system have helped our business associates build sustainable businesses.'
+                } %}
+				</div>
+			</div>
+
+		</div>
+
+	</section>
 {% endblock %}
