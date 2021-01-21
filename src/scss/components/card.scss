@@ -1,0 +1,18 @@
+.card-variant-1 {
+    border-radius: 15px;
+
+    .card-body {
+        .card-title {
+            &::after {
+                content: "";
+                border: 2px solid $red;
+                width: 50px;
+                position: relative;
+                display: block;
+                margin: auto;
+                margin-top: 20px;
+            }
+        }
+    }
+   
+}

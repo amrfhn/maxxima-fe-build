@@ -1,0 +1,10 @@
+<div class="card card-variant-1 h-100">
+	<div class="img-wrapper mx-auto">
+		{% include "@::templates/components/icon.twig" with { iconName: icon , iconSize: '5xl' } %}
+	</div>
+	<div class="card-body p-md-4">
+		<h5 class="card-title text-center mb-3">{{ cardTitle }}</h5>
+		<p class="card-text lead text-center">{{ cardText }}</p>
+		{# <a href="#" class="stretched-link"></a> #}
+	</div>
+</div>
