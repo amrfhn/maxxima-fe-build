@@ -9,11 +9,16 @@
 @import "~bootstrap/scss/bootstrap";
 // @import "~swiper/swiper-bundle.css";
 
+@import "utilities";
+
+
 // Components
 @import "./components/icon";
 @import "./components/buttons";
 @import "./components/navbar";
 @import "./components/footer";
+@import "./components/video-banner";
+
 
 
 

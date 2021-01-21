@@ -1,0 +1,20 @@
+.display-1 {
+	font-size: 48px;
+    font-weight: 800;
+    
+    @include media-breakpoint-up(lg) {
+		font-size: 120px;
+	}
+}
+
+.display-2 {
+	font-size: 30px;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 70px;
+	}
+}
+
+.lead {
+	font-size: 18px;
+}

@@ -7,4 +7,11 @@
         min-width: 125px;
         font-weight: 500;
     }
+
+    &.btn-outline-primary {
+        color: $red;
+        border: 1px solid $red;
+        border-radius: 2rem;
+        padding: 3px 22px;
+    }
 }

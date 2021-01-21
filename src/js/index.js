@@ -3,6 +3,8 @@ import "bootstrap";
 
 import 'core-js';
 import 'regenerator-runtime/runtime';
+import "./components/video-banner";
+
 
 $(function () {
     console.log('Document ready!')
