@@ -1,6 +1,8 @@
 header {
-	position: relative;
+	position: fixed;
 	z-index: 1000;
+	width: 100%;
+	top: 0;
 
 	.brand-logo {
 		width: 124px;
@@ -32,12 +34,12 @@ header {
 	}
 
 	.navbar {
-		min-height: 60px;
+		height: 60px;
 		background-color: #fff;
 		width: 100%;
 
 		@include media-breakpoint-up(lg) {
-			min-height: 97px;
+			height: 95px;
 		}
 		.nav-item {
 			margin-left: 32px;
