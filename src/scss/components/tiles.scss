@@ -1,0 +1,19 @@
+.two-tiles-container {
+	padding-left: 140px;
+	padding-top: 25px;
+
+	@include media-breakpoint-up(lg) {
+		padding-left: 235px;
+		padding-top: 90px;
+	}
+}
+
+.tiles {
+	&.tiles-variant1 {
+		.tiles-title {
+			font-size: 24px;
+			line-height: 34px;
+			font-weight: 800;
+		}
+	}
+}

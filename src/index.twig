@@ -5,12 +5,14 @@
 		{% include "@::templates/components/video-banner.twig" %}
 	</section>
 
-	<section class="bg-gray-200" id="aboutUs">
-		<div class="pt-5 px-4">
-			<h3 class="display-4 text-center">WHY CHOOSE <span class="text-red">MAXXIMA</span></h3>
+	<section class="bg-gray-200 py-5" id="aboutUs">
+		<div class="px-4">
+			<h3 class="display-3 text-center">WHY CHOOSE
+				<span class="text-red">MAXXIMA</span>
+			</h3>
 			<p class="text-center lead">We are committed to paving new opportunities for people to live healthier and wealthier every day.</p>
 		</div>
-		<div class="container-fluid px-3 px-md-5 pt-4 pb-5">
+		<div class="container-fluid px-3 px-md-5 pt-4">
 			<div class="row row-cols-1 row-cols-md-3 g-4">
 				<div class="col">
 					{% include "@::templates/components/card-v1.twig" with {
@@ -34,8 +36,95 @@
                 } %}
 				</div>
 			</div>
+		</div>
+	</section>
+
+	<section>
+		<div class="container-fluid px-3 px-md-5 pt-4 pb-5 position-relative">
+			<div class="two-tiles-container row row-cols-1 row-cols-md-2 g-4">
+				<div class="col">
+					<div>
+						<h3 class="display-3 mb-4">YEARS OF ECOMMERCE EXPERIENCE IN</h3>
+						<h4 class="display-4 mb-5">Malaysia, Indonesia,
+							<br/>Singapore, & Brunei</h4>
+
+						<div class="row d-none d-md-flex">
+							<div class="col-md-6">
+								{% include "@::templates/components/tiles-v1.twig" with {
+								title: '200k+',
+								text: 'Successful Business Associates',
+							} %}
+							</div>
+							<div class="col-md-6">
+								{% include "@::templates/components/tiles-v1.twig" with {
+								title: '100,000m+',
+								text: 'Total Weekly Commissions Paid',
+							} %}
+							</div>
+							<div class="col-md-6">
+								{% include "@::templates/components/tiles-v1.twig" with {
+								title: '4+	',
+								text: 'Strong SEA Presence',
+							} %}
+							</div>
+							<div class="col-md-6">
+								{% include "@::templates/components/tiles-v1.twig" with {
+								title: '10+',
+								text: 'Quality Products',
+							} %}
+							</div>
+						</div>
+
+					</div>
+				</div>
+				<div class="col d-md-block d-none">
+					{% include "@::templates/components/line-separator.twig" %}
+
+					<p class="lead">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
+					<p class="lead">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
+					<p class="lead">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
+				</div>
+			</div>
+
+			<div class="row d-md-none d-flex">
+				<div class="col-12">
+					{% include "@::templates/components/tiles-v1.twig" with {
+						title: '200k+',
+						text: 'Successful Business Associates',
+					} %}
+				</div>
+				<div class="col-12">
+					{% include "@::templates/components/tiles-v1.twig" with {
+						title: '100,000m+',
+						text: 'Total Weekly Commissions Paid',
+					} %}
+				</div>
+				<div class="col-12">
+					{% include "@::templates/components/tiles-v1.twig" with {
+						title: '4+	',
+						text: 'Strong SEA Presence',
+					} %}
+				</div>
+				<div class="col-12">
+					{% include "@::templates/components/tiles-v1.twig" with {
+						title: '10+',
+						text: 'Quality Products',
+					} %}
+				</div>
+
+				<div class="col">
+					{% include "@::templates/components/line-separator.twig" %}
+
+					<p class="lead">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
+					<p class="lead">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
+					<p class="lead">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
+				</div>
+			</div>
+
+			{% include "@::templates/components/font-thumbnail.twig" with {
+				text: '9',
+			} %}
 
 		</div>
-
 	</section>
 {% endblock %}

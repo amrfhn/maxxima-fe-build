@@ -1,0 +1,15 @@
+.thumbnail-wrapper {
+	.thumbnail {
+		position: absolute;
+		left: -10px;
+		top: -50px;
+		font-size: 250px;
+		font-weight: 800;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 500px;
+			left: -45px;
+			top: -140px;
+		}
+	}
+}
