@@ -39,7 +39,7 @@
 		</div>
 	</section>
 
-	<section class="py-5">
+	<section class="py-5" id="ourProduct">
 		<div class="container-fluid px-3 px-md-5 pt-4 pb-5 position-relative">
 			<div class="two-tiles-container row row-cols-1 row-cols-md-2 g-4">
 				<div class="col">
@@ -47,7 +47,6 @@
 						<h3 class="display-3 mb-4">YEARS OF ECOMMERCE EXPERIENCE IN</h3>
 						<h4 class="display-4 mb-5">Malaysia, Indonesia,
 							<br/>Singapore, & Brunei</h4>
-
 						<div class="row d-none d-md-flex">
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
@@ -74,12 +73,10 @@
 							} %}
 							</div>
 						</div>
-
 					</div>
 				</div>
 				<div class="col d-md-block d-none">
 					{% include "@::templates/components/line-separator.twig" %}
-
 					<p class="lead">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
 					<p class="lead">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
 					<p class="lead">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
@@ -124,14 +121,11 @@
 			{% include "@::templates/components/font-thumbnail.twig" with {
 				text: '9',
 			} %}
-
 		</div>
-
 		<div class="px-4">
 			<h3 class="display-3 text-center">Beauty & Wellness Products</h3>
 			<p class="text-center lead">Elixxi® Beauty + Maxxima Nutrition - XSERIES</p>
 		</div>
-
 		{% set products = [
 				{
 			 		name: 'Elixxi® Beauty Drink',
@@ -169,4 +163,59 @@
 			</div>
 		</div>
 	</section>
+
+	<section class="py-5">
+		<div class="container">
+			<div class="col-12">
+				<h3 class="display-3 text-center">AWARDS</h3>
+				<p class="text-center lead sub-title mx-auto">Our efforts and hard work in building the business has brought about significant successes, including recognitions and numerous accolades. Like an upward spiral, the journey in pursuit of greatness has no end. Since 2013, our achievements have been shaped by the strength of the foundations we have set. This is what Maxxima is all about - always raising the bars of excellence.</p>
+			</div>
+			<div class="row row-cols-1 row-cols-md-4 g-0">
+				{% set awards = [
+					{
+						logo: 'assets/img/awards_logo-01.png',
+						altText: 'awards-1'
+					},
+					{
+						logo: 'assets/img/awards_logo-02.png',
+						altText: 'awards-2'
+					},
+					{
+						logo: 'assets/img/awards_logo-03.png',
+						altText: 'awards-3'
+					},
+					{
+						logo: 'assets/img/awards_logo-04.png',
+						altText: 'awards-4'
+					},
+					{
+						logo: 'assets/img/awards_logo-05.png',
+						altText: 'awards-5'
+					},
+					{
+						logo: 'assets/img/awards_logo-06.png',
+						altText: 'awards-6'
+					},
+					{
+						logo: 'assets/img/awards_logo-07.png',
+						altText: 'awards-7'
+					},
+					{
+						logo: 'assets/img/awards_logo-08.png',
+						altText: 'awards-8'
+					}
+				] 
+				%}
+				{% for award in awards %}
+					<div class="col">
+						{% include "@::templates/components/logo-thumbnail.twig" with {
+							logo: award.logo,
+							altText: award.altText
+						}%}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
 {% endblock %}

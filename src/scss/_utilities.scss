@@ -51,8 +51,14 @@ h5 {
 	font-size: 18px;
 }
 
+.sub-title {
+	@include media-breakpoint-up(lg) {
+		width: 83%;
+	}
+}
+
 a {
-	color:$dark;
+	color: $dark;
 	text-decoration: none;
 	font-weight: 700;
 	font-size: 18px;
