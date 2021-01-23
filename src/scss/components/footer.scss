@@ -1,8 +1,39 @@
 footer {
-    .footer {
-        background-color: $dark;
-        color: #fff;
-        min-height: 52px;
-        font-size: 18px;
-    }
+	.footer {
+		background-color: $dark;
+		color: #fff;
+		min-height: 52px;
+		font-size: 18px;
+
+		.footer-top {
+			border-bottom: 1px solid #fff;
+
+			.logo-wrapper {
+				width: 206px;
+			}
+
+			.footer-child-wrapper {
+				font-weight: 800;
+				.list-group {
+					.list-group-item {
+						padding: 0;
+						text-decoration: none;
+						background-color: transparent;
+						border: none;
+						color: #fff;
+						font-weight: 500;
+					}
+				}
+			}
+		}
+
+		.footer-bot {
+			@include media-breakpoint-up(md) {
+				width: 90%;
+			}
+			.cr-text {
+				font-size: 10px;
+			}
+		}
+	}
 }

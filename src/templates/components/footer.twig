@@ -1,5 +1,67 @@
-<div class="footer bg-s1 px-3 px-md-5 py-3 text-right">
-	<div class="container">
-		<p class="small w mb-0">Copyright Maxxima Resources (M) Sdn Bhd. 2020. All Rights Reserved</p>
+<div class="footer bg-s1 px-3 px-md-2 pt-5 pb-4 text-right">
+	<div class="container-fluid">
+		<div class="footer-top d-md-flex d-block justify-content-around pt-3 pb-3">
+			<div class="logo-wrapper mb-3">
+				<img class="w-100" src="assets/img/logo.png" alt="Main logo">
+			</div>
+			<div class="footer-child-wrapper mb-3">
+				<p class="small mb-2">Quicklinks</p>
+				<div class="list-group">
+					<a class="list-group-item list-group-item-action mb-0 small" href="/">Home</a>
+					<a class="list-group-item list-group-item-action mb-0 small" href="#aboutUs">About Us</a>
+					<a class="list-group-item list-group-item-action mb-0 small" href="#ourProduct">Our Product</a>
+					<a class="list-group-item list-group-item-action mb-0 small" href="#career">Career</a>
+				</div>
+			</div>
+			<div class="footer-child-wrapper mb-3">
+				<p class="small mb-2">Connect</p>
+				<div class="list-group">
+					<a class="list-group-item list-group-item-action mb-0 small" href="/">Contact Us</a>
+				</div>
+			</div>
+			<div class="footer-child-wrapper mb-3">
+				<p class="small mb-2">Check Our Social</p>
+				<div class="list-group list-group-horizontal">
+					<a class="list-group-item list-group-item-action mb-0 small" href="/">
+						{% include "@::templates/components/icon.twig" with { iconName: 'check', iconSize: 'm' } %}
+					</a>
+					<a class="list-group-item list-group-item-action mb-0 small" href="/">
+						{% include "@::templates/components/icon.twig" with { iconName: 'check', iconSize: 'm' } %}
+					</a>
+					<a class="list-group-item list-group-item-action mb-0 small" href="/">
+						{% include "@::templates/components/icon.twig" with { iconName: 'check', iconSize: 'm' } %}
+					</a>
+					<a class="list-group-item list-group-item-action mb-0 small" href="/">
+						{% include "@::templates/components/icon.twig" with { iconName: 'check', iconSize: 'm' } %}
+					</a>
+				</div>
+			</div>
+			<div class="footer-child-wrapper mb-3">
+				<p class="small mb-2">Hotline</p>
+				<div class="list-group">
+					<a class="list-group-item list-group-item-action mb-0 small" href="tel:1800187996">
+					1 800 18 7996
+					</a>
+				</div>
+			</div>
+			<div class="footer-child-wrapper mb-3">
+				<p class="small mb-2">Address</p>
+				<div class="list-group">
+					<p class="list-group-item mb-0 small">
+					Maxxima Resources (M) Sdn Bhd,<br/>
+					Jalan Pensyarah U1/28,<br/>
+					Hicom-glenmarie Industrial Park,<br/>
+					40150 Shah Alam,<br/>
+					Selangor
+					</p>
+				</div>
+			</div>
+
+		</div>
+		<div class="footer-bot pt-3 mx-auto">
+			<p class="cr-text small w mb-0 text-center">Copyright Maxxima Resources (M) Sdn Bhd. 2020. All Rights Reserved <br/>
+			*DISCLAIMER: These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any diease. The views and nutrinational advice expressed by Maxxima Nutrition are not intended for the purpose of providing medical advice. Please always consult your health care provider if you are taking any medications or have any medical condition, individual results may mary.
+			</p>
+		</div>
 	</div>
 </div>
