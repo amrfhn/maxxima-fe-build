@@ -218,4 +218,53 @@
 		</div>
 	</section>
 
+	<section class="bg-gray-200 py-5">
+		<div class="container">
+			<div class="col-12">
+				<h3 class="display-3 text-center">STRATEGIC PARTNERS</h3>
+				<p class="text-center lead sub-title mx-auto">Our brilliant performance in managing the business has attracted many international collaborations in order to make our products and services reach an optimal level. In MAXXIMA, we are driven to build a strong foundation that can achieve higher success.</p>
+			</div>
+
+			<div class="row row-cols-3 row-cols-md-6 g-0 px-md-4">
+				{% set partners = [
+					{
+						logo: 'assets/img/strategic-partners_logo-01.png',
+						altText: 'partners-1'
+					},
+					{
+						logo: 'assets/img/strategic-partners_logo-02.png',
+						altText: 'partners-2'
+					},
+					{
+						logo: 'assets/img/strategic-partners_logo-03.png',
+						altText: 'partners-3'
+					},
+					{
+						logo: 'assets/img/strategic-partners_logo-04.png',
+						altText: 'partners-4'
+					},
+					{
+						logo: 'assets/img/strategic-partners_logo-05.png',
+						altText: 'partners-5'
+					},
+					{
+						logo: 'assets/img/strategic-partners_logo-06.png',
+						altText: 'partners-6'
+					},
+				] 
+				%}
+				{% for partner in partners %}
+					<div class="col">
+						{% include "@::templates/components/logo-thumbnail.twig" with {
+							logo: partner.logo,
+							altText: partner.altText,
+							variant: 'partners-thumbnail'
+						}%}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+
+	</section>
+
 {% endblock %}
