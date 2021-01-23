@@ -1,0 +1,18 @@
+<div class="card card-variant-2 h-100">
+	<div class="img-wrapper mx-auto mb-3">
+		<img src="{{ image }}"  alt="{{ cardTitle }}">
+	</div>
+	<div class="card-body p-md-4">
+		<h5 class="card-title mb-3">{{ cardTitle }}</h5>
+		<p class="card-text lead">{{ cardText }}</p>
+
+        <div class="d-flex">
+            <a class="card-cta stretched-link"  href="{{ cardUrl }}">
+                FIND OUT MORE
+            </a>
+            <div class="icon-wrapper ms-2">
+                {% include "@::templates/components/icon.twig" with { iconName: 'right-arrow', iconSize: '' } %}
+            </div>
+        </div>
+	</div>
+</div>

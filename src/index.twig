@@ -39,7 +39,7 @@
 		</div>
 	</section>
 
-	<section>
+	<section class="py-5">
 		<div class="container-fluid px-3 px-md-5 pt-4 pb-5 position-relative">
 			<div class="two-tiles-container row row-cols-1 row-cols-md-2 g-4">
 				<div class="col">
@@ -125,6 +125,48 @@
 				text: '9',
 			} %}
 
+		</div>
+
+		<div class="px-4">
+			<h3 class="display-3 text-center">Beauty & Wellness Products</h3>
+			<p class="text-center lead">Elixxi® Beauty + Maxxima Nutrition - XSERIES</p>
+		</div>
+
+		{% set products = [
+				{
+			 		name: 'Elixxi® Beauty Drink',
+					description: 'All products under MAXXIMA are developed together with numerous R&D teams around the globe and backed by clinically studies to ensure maximum levels of safety and effectiveness.',
+					image: 'assets/img/products/Product-Elixxi-Beauty.png',
+					link: 'https://www.google.com/',
+		 		},
+				{
+			 		name: 'Elixxi® Lipo Facial Masks',
+					description: 'Infused with precious pure flower extracts and enhanced with LipoButy™ Nanotechnology, Elixxi® Lipo Facial Masks is able to nourish the skin with a deeper and more instant penetration.',
+					image: 'assets/img/products/Product-Elixxi-Lipo-Mask.png',
+					link: 'https://www.google.com/',
+		 		},
+				{
+			 		name: 'XSERIES - CMX',
+					description: 'Formulated with a patent-pending blend of active ingredients known as ImmuMaxx™, CMX is a liquid form daily supplement that boosts your energy level and gives your body and a large amount of nutrition to stay active and healthy.',
+					image: 'assets/img/products/CMX.png',
+					link: 'https://www.google.com/',
+		 		},
+			]
+		%}
+
+		<div class="container-fluid px-3 px-md-5 pt-4">
+			<div class="row row-cols-1 row-cols-md-3 g-4">
+				{% for product in products %}
+					<div class="col">
+						{% include "@::templates/components/card-v2.twig" with {
+						image: product.image,
+						cardTitle: product.name,
+						cardText: product.description,
+						cardUrl: product.link,
+                	} %}
+					</div>
+				{% endfor %}
+			</div>
 		</div>
 	</section>
 {% endblock %}

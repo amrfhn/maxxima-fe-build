@@ -1,18 +1,67 @@
 .card-variant-1 {
-    border-radius: 15px;
+	border-radius: 15px;
 
-    .card-body {
-        .card-title {
-            &::after {
-                content: "";
-                border: 2px solid $red;
-                width: 50px;
-                position: relative;
-                display: block;
-                margin: auto;
-                margin-top: 20px;
-            }
-        }
-    }
-   
+	.card-body {
+		.card-title {
+			&::after {
+				content: "";
+				border: 2px solid $red;
+				width: 50px;
+				position: relative;
+				display: block;
+				margin: auto;
+				margin-top: 20px;
+			}
+		}
+	}
+}
+
+.card-variant-2 {
+	.img-wrapper {
+		width: auto;
+		height: 185px;
+
+		img {
+			width: 100%;
+		}
+	}
+	.card-body {
+		border: 1px solid #c1c1c1;
+		border-top: 5px solid #c1c1c1;
+		transition: all 0.3s ease;
+
+		.icon-wrapper {
+			position: relative;
+			transition: all 0.5s ease;
+			left: 0;
+
+			svg {
+				width: 20px;
+				height: 18px;
+
+				@include media-breakpoint-up(lg) {
+					width: 20px;
+					height: 20px;
+				}
+			}
+		}
+
+		&:hover {
+			border: 1px solid $red;
+			border-top: 5px solid $red;
+
+			.icon-wrapper {
+				color: $red;
+				left: 20px;
+			}
+		}
+	}
+
+	.card-cta {
+		font-size: 14px;
+
+		@include media-breakpoint-up(lg) {
+			font-size: 18px;
+		}
+	}
 }

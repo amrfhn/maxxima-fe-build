@@ -37,6 +37,7 @@ header {
 		height: 60px;
 		background-color: #fff;
 		width: 100%;
+		border-bottom: 1px solid $gray-300;
 
 		@include media-breakpoint-up(lg) {
 			height: 95px;

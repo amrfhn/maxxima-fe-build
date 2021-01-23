@@ -41,6 +41,25 @@
 	}
 }
 
+h5 {
+	font-size: 22px;
+	line-height: 28px;
+	font-weight: 700;
+}
+
 .lead {
 	font-size: 18px;
+}
+
+a {
+	color:$dark;
+	text-decoration: none;
+	font-weight: 700;
+	font-size: 18px;
+	line-height: 28px;
+
+	&:hover {
+		color: $link-color;
+		text-decoration: none;
+	}
 }
