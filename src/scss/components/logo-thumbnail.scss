@@ -1,8 +1,17 @@
-.awards-logo {
-    width: 200px;
-    height: 200px;
+.logo-thumbnail {
+	width: 200px;
+	height: 200px;
 
-    img {
-        width: 100%;
-    }
+	img {
+		width: 100%;
+	}
+
+	&.partners-thumbnail {
+        width: 78px;
+            height: 78px;
+		@include media-breakpoint-up(lg) {
+            width: 112px;
+            height: 112px;
+		}
+	}
 }
