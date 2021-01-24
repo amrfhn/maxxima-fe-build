@@ -7,7 +7,7 @@
 
 // Vendor
 @import "~bootstrap/scss/bootstrap";
-// @import "~swiper/swiper-bundle.css";
+@import "~swiper/swiper-bundle.css";
 
 @import "utilities";
 
@@ -23,6 +23,8 @@
 @import "./components/tiles";
 @import "./components/line-separator";
 @import "./components/logo-thumbnail";
+@import "./components/carousel";
+
 
 
 
