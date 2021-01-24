@@ -5,6 +5,8 @@ import 'core-js';
 import './global';
 import 'regenerator-runtime/runtime';
 import "./components/video-banner";
+import "./components/carousel/carousel.testimonials";
+
 
 
 $(function () {

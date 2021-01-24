@@ -1,15 +1,37 @@
 .thumbnail-wrapper {
 	.thumbnail {
-		position: absolute;
-		left: -10px;
-		top: -50px;
 		font-size: 250px;
 		font-weight: 800;
 
 		@include media-breakpoint-up(lg) {
 			font-size: 500px;
-			left: -45px;
-			top: -140px;
 		}
+	}
+
+	&.variant-1 {
+		position: relative;
+	}
+
+	&.variant-2 {
+		.thumbnail {
+			position: absolute;
+			left: -10px;
+			top: -50px;
+
+			@include media-breakpoint-up(lg) {
+				left: -45px;
+				top: -140px;
+			}
+		}
+	}
+}
+
+.font-img {
+	width: 124px;
+	height: auto;
+
+	@include media-breakpoint-up(md) {
+		width: 248px;
+		height: auto;
 	}
 }

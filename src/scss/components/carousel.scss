@@ -1,0 +1,18 @@
+.carousel {
+	&.variant-testimonials {
+		.swiper-slide {
+			.testimonials-details {
+				img {
+					width: 105px;
+					height: 108px;
+					border-radius: 100%;
+
+					@include media-breakpoint-up(md) {
+						width: 105px;
+						height: 108px;
+					}
+				}
+			}
+		}
+	}
+}

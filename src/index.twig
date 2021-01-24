@@ -120,6 +120,7 @@
 
 			{% include "@::templates/components/font-thumbnail.twig" with {
 				text: '9',
+				variant: 'variant-2',
 			} %}
 		</div>
 		<div class="px-4">
@@ -227,44 +228,134 @@
 
 			<div class="row row-cols-3 row-cols-md-6 g-0 px-md-4">
 				{% set partners = [
-					{
-						logo: 'assets/img/strategic-partners_logo-01.png',
-						altText: 'partners-1'
-					},
-					{
-						logo: 'assets/img/strategic-partners_logo-02.png',
-						altText: 'partners-2'
-					},
-					{
-						logo: 'assets/img/strategic-partners_logo-03.png',
-						altText: 'partners-3'
-					},
-					{
-						logo: 'assets/img/strategic-partners_logo-04.png',
-						altText: 'partners-4'
-					},
-					{
-						logo: 'assets/img/strategic-partners_logo-05.png',
-						altText: 'partners-5'
-					},
-					{
-						logo: 'assets/img/strategic-partners_logo-06.png',
-						altText: 'partners-6'
-					},
-				] 
-				%}
+				{
+					logo: 'assets/img/strategic-partners_logo-01.png',
+					altText: 'partners-1'
+				},
+				{
+					logo: 'assets/img/strategic-partners_logo-02.png',
+					altText: 'partners-2'
+				},
+				{
+					logo: 'assets/img/strategic-partners_logo-03.png',
+					altText: 'partners-3'
+				},
+				{
+					logo: 'assets/img/strategic-partners_logo-04.png',
+					altText: 'partners-4'
+				},
+				{
+					logo: 'assets/img/strategic-partners_logo-05.png',
+					altText: 'partners-5'
+				},
+				{
+					logo: 'assets/img/strategic-partners_logo-06.png',
+					altText: 'partners-6'
+				},
+			] 
+			%}
 				{% for partner in partners %}
 					<div class="col">
 						{% include "@::templates/components/logo-thumbnail.twig" with {
-							logo: partner.logo,
-							altText: partner.altText,
-							variant: 'partners-thumbnail'
-						}%}
+						logo: partner.logo,
+						altText: partner.altText,
+						variant: 'partners-thumbnail'
+					}%}
 					</div>
 				{% endfor %}
 			</div>
 		</div>
+	</section>
 
+	<section class="py-5">
+		<div class="container">
+			<div class="row row-cols-1 row-cols-md-2">
+				<div class="col px-0">
+					<img class="font-img mb-3 mb-md-0" src="assets/img/double-quote.png" />
+					<h3 class="display-3 mb-4 ms-3">TESTIMONIALS</h3>
+				</div>
+				<div class="col">
+					<div class="carousel variant-testimonials swiper-container">
+						<div class="swiper-wrapper">
+							{% set testimonials = [ 
+								{
+									name: 'Mohd Mukhriz Mohamed',
+									origin: 'Alor Setar, Kedah',
+									image: 'Mukhriz.jpg',
+									quote: '“As a person who is active and loves sports, endurance and agility is very important to keep me going. I was so impressed with the product AFX. After consuming the first bottle, I can actually feel the loads of energy and goodness. For me, another replacement is no longer an option”',
+								},
+								{
+									name: 'Harun',
+									origin: 'Alor Setar, Kedah',
+									image: 'Harun.jpg',
+                        			quote: '“As a person who is active and loves sports, endurance and agility is very important to keep me going. I was so impressed with the product AFX. After consuming the first bottle, I can actually feel the loads of energy and goodness. For me, another replacement is no longer an option”',
+
+								}
+                        		
+							] %}
+							{% for testimonial in testimonials %}
+								<div class="swiper-slide">
+									<div class="testimonial-quote">
+										<p class="lead">{{testimonial.quote}}</p>
+									</div>
+									<div class="testimonials-details d-flex">
+										<img src="assets/img/{{testimonial.image}}" alt="Image of testimonials">
+										<div class="d-block ms-3 my-auto">
+											<p class="lead mb-0">{{testimonial.name}}</p>
+											<p class="lead">{{testimonial.origin}}</p>
+										</div>
+									</div>
+								</div>
+							{% endfor %}
+						</div>
+						<div class="swiper-pagination swiper-pagination-bullets"></div>
+					</div>
+				</div>
+			</div>
+		</div>
+	</section>
+
+	<section class="py-5 bg-gray-200">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h3 class="display-3 mb-4 ms-3 text-red text-center">OUR LEADERS</h3>
+					<p class="lead text-center">With over 50 years of combined entrepreneurial successes and experiences, our team of leaders know what it takes to create lasting and thriving businesses. Every one of MAXXIMA’s leader stands out from the crowd, not only for their accomplishments, but for their integrity and responsible management as well. At MAXXIMA you will be immediately surrounded with the right people who know what it takes to truly propel you towards your life goals.</p>
+				</div>
+				<div class="d-md-flex justify-content-center">
+					{% 
+						set leaders = [
+							{
+								name: 'Dato’ Dr. Reza Ibrahim',
+								position: 'Founder/CEO',
+								image: 'reza-ibrahim'
+							},
+							{
+								name: 'Mr. Saiffil Fariz',
+								position: 'Co-Founder/CTO',
+								image: 'saiffil-fariz'
+							},
+							{
+								name: 'Dato Abu Samah',
+								position: 'Chairman',
+								image: 'blank'
+							}
+						]
+					%}
+					{% for leader in leaders %}
+						<div class="leaders-container tiles tiles-variant2 text-center mx-md-4">
+							<img class="tiles-img mb-3" src="assets/img/{{ leader.image }}.png" alt="Image-of leader" />
+							<p class="lead mb-0 bold">{{ leader.name }}</p>
+							<p class="lead">
+								<em>{{ leader.position }}</em>
+							</p>
+						</div>
+
+					{% endfor %}
+				</div>
+
+			</div>
+		</div>
 	</section>
 
 {% endblock %}
