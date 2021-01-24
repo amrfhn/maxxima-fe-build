@@ -1,17 +1,35 @@
 .btn {
-    border-radius: 0.3rem;
-    font-size: 16px;
+	border-radius: 0.3rem;
+	font-size: 16px;
 
-    &.btn-primary {
-        color: $white;
-        min-width: 125px;
-        font-weight: 500;
-    }
+	&.btn-primary {
+		color: $white;
+		min-width: 125px;
+		font-weight: 500;
+	}
 
-    &.btn-outline-primary {
-        color: $red;
-        border: 1px solid $red;
-        border-radius: 2rem;
-        padding: 3px 22px;
-    }
+	&.btn-secondary {
+		background-color: #fff;
+		color: $red;
+		font-size: 18px;
+		line-height: 25px;
+		font-weight: 700;
+		max-height: 48px;
+		padding: 12px 36px;
+		border-color: #fff;
+
+		&:focus {
+			color: $red;
+			background-color: #fff;
+			border-color: #fff;
+			box-shadow: none;
+		}
+	}
+
+	&.btn-outline-primary {
+		color: $red;
+		border: 1px solid $red;
+		border-radius: 2rem;
+		padding: 3px 22px;
+	}
 }

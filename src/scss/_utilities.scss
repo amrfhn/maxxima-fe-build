@@ -41,6 +41,17 @@
 	}
 }
 
+h2 {
+	font-size: 28px;
+	line-height: 32px;
+	font-weight: 800;
+
+	@include media-breakpoint-up(lg) {
+		font-size: 36px;
+		line-height: 58px;
+	}
+}
+
 h5 {
 	font-size: 22px;
 	line-height: 28px;

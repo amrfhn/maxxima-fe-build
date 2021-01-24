@@ -6,6 +6,11 @@ import './global';
 import 'regenerator-runtime/runtime';
 import "./components/video-banner";
 import "./components/carousel/carousel.testimonials";
+import "./components/carousel/carousel.products";
+import "./components/carousel/carousel.card";
+import "./components/card";
+
+
 
 
 

@@ -26,7 +26,7 @@
 		}
 	}
 	.card-body {
-		border: 1px solid #c1c1c1;
+		border: none;
 		border-top: 5px solid #c1c1c1;
 		transition: all 0.3s ease;
 
@@ -47,7 +47,6 @@
 		}
 
 		&:hover {
-			border: 1px solid $red;
 			border-top: 5px solid $red;
 
 			.icon-wrapper {
@@ -63,5 +62,23 @@
 		@include media-breakpoint-up(lg) {
 			font-size: 18px;
 		}
+	}
+}
+
+.card-variant-3 {
+	border-radius: 15px;
+	margin-top: 120px;
+	position: relative;
+	.img-wrapper {
+		position: absolute;
+		top: -60px;
+		left: 32%;
+		img {
+			width: 120px;
+			height: 120px;
+		}
+	}
+	.card-body {
+		margin-top: 60px;
 	}
 }
