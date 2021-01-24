@@ -1,0 +1,7 @@
+.cta-banner {
+	.banner-text, .banner-cta {
+		@include media-breakpoint-down(md) {
+            text-align: center;
+		}
+	}
+}

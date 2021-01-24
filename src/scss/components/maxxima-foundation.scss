@@ -1,0 +1,45 @@
+.maxxima-foundation {
+	min-height: 320px;
+
+	.maxxima-content {
+		@include media-breakpoint-up(md) {
+			padding-left: 100px;
+			margin-top: 15px;
+		}
+	}
+	.img-wrapper-1 {
+		position: absolute;
+		left: -20px;
+		bottom: -50px;
+
+		@include media-breakpoint-up(md) {
+			// width: 22px;
+		}
+
+		img {
+            width: 16px;
+            @include media-breakpoint-up(md) {
+                width: 50px;
+            }
+		}
+	}
+
+	.img-wrapper-2 {
+		position: absolute;
+		// right: -120px;
+		right: -20px;
+		top: -124px;
+
+		@include media-breakpoint-up(md) {
+			top: -170px;
+		}
+
+		img {
+			width: 140px;
+
+			@include media-breakpoint-up(md) {
+				width: 400px;
+			}
+		}
+	}
+}

@@ -13,28 +13,32 @@
 			<p class="text-center lead">We are committed to paving new opportunities for people to live healthier and wealthier every day.</p>
 		</div>
 		<div class="container-fluid px-3 px-md-5 pt-4">
-			<div class="row row-cols-1 row-cols-md-3 g-4">
-				<div class="col">
-					{% include "@::templates/components/card-v1.twig" with {
+			<div class="carousel variant-card1 swiper-container">
+				<div class="swiper-wrapper">
+					<div class="swiper-slide">
+						{% include "@::templates/components/card-v1.twig" with {
                     icon: 'quality',
                     cardTitle: 'High Quality Products',
                     cardText: 'All products under MAXXIMA are developed together with numerous R&D teams around the globe and backed by clinically studies to ensure maximum levels of safety and effectiveness.'
                 } %}
-				</div>
-				<div class="col">
-					{% include "@::templates/components/card-v1.twig" with {
+					</div>
+					<div class="swiper-slide">
+						{% include "@::templates/components/card-v1.twig" with {
                     icon: 'compensation',
                     cardTitle: 'Consistent Compensation',
                     cardText: 'Since MAXXIMA’s establishment in 2013, we have paid our business associates on a weekly basis, with the commissions totalling up to over RM100,000 million, to date. Our sound business model and compensation plan has positively transformed the lives of many financially.'
                 } %}
-				</div>
-				<div class="col">
-					{% include "@::templates/components/card-v1.twig" with {
+					</div>
+					<div class="swiper-slide">
+						{% include "@::templates/components/card-v1.twig" with {
                     icon: 'support',
                     cardTitle: 'Strong Support System',
                     cardText: 'MAXXIMA is known for pushing the benchmarks of beauty and wellness, making us the talk of the town in the industry. Our efficient training and support system have helped our business associates build sustainable businesses.'
                 } %}
+					</div>
 				</div>
+				<div class="swiper-pagination"></div>
+
 			</div>
 		</div>
 	</section>
@@ -44,7 +48,7 @@
 			<div class="two-tiles-container row row-cols-1 row-cols-md-2 g-4">
 				<div class="col">
 					<div>
-						<h3 class="display-3 mb-4">YEARS OF ECOMMERCE EXPERIENCE IN</h3>
+						<h3 class="display-3 mb-md-4">YEARS OF ECOMMERCE EXPERIENCE IN</h3>
 						<h4 class="display-4 mb-5">Malaysia, Indonesia,
 							<br/>Singapore, & Brunei</h4>
 						<div class="row d-none d-md-flex">
@@ -127,40 +131,44 @@
 			<h3 class="display-3 text-center">Beauty & Wellness Products</h3>
 			<p class="text-center lead">Elixxi® Beauty + Maxxima Nutrition - XSERIES</p>
 		</div>
-		{% set products = [
-				{
-			 		name: 'Elixxi® Beauty Drink',
-					description: 'All products under MAXXIMA are developed together with numerous R&D teams around the globe and backed by clinically studies to ensure maximum levels of safety and effectiveness.',
-					image: 'assets/img/products/Product-Elixxi-Beauty.png',
-					link: 'https://www.google.com/',
-		 		},
-				{
-			 		name: 'Elixxi® Lipo Facial Masks',
-					description: 'Infused with precious pure flower extracts and enhanced with LipoButy™ Nanotechnology, Elixxi® Lipo Facial Masks is able to nourish the skin with a deeper and more instant penetration.',
-					image: 'assets/img/products/Product-Elixxi-Lipo-Mask.png',
-					link: 'https://www.google.com/',
-		 		},
-				{
-			 		name: 'XSERIES - CMX',
-					description: 'Formulated with a patent-pending blend of active ingredients known as ImmuMaxx™, CMX is a liquid form daily supplement that boosts your energy level and gives your body and a large amount of nutrition to stay active and healthy.',
-					image: 'assets/img/products/CMX.png',
-					link: 'https://www.google.com/',
-		 		},
-			]
-		%}
+
 
 		<div class="container-fluid px-3 px-md-5 pt-4">
-			<div class="row row-cols-1 row-cols-md-3 g-4">
-				{% for product in products %}
-					<div class="col">
-						{% include "@::templates/components/card-v2.twig" with {
+			<div class="carousel variant-products swiper-container">
+				<div class="swiper-wrapper">
+					{% set products = [
+						{
+							name: 'Elixxi® Beauty Drink',
+							description: 'All products under MAXXIMA are developed together with numerous R&D teams around the globe and backed by clinically studies to ensure maximum levels of safety and effectiveness.',
+							image: 'assets/img/products/Product-Elixxi-Beauty.png',
+							link: 'https://www.google.com/',
+						},
+						{
+							name: 'Elixxi® Lipo Facial Masks',
+							description: 'Infused with precious pure flower extracts and enhanced with LipoButy™ Nanotechnology, Elixxi® Lipo Facial Masks is able to nourish the skin with a deeper and more instant penetration.',
+							image: 'assets/img/products/Product-Elixxi-Lipo-Mask.png',
+							link: 'https://www.google.com/',
+						},
+						{
+							name: 'XSERIES - CMX',
+							description: 'Formulated with a patent-pending blend of active ingredients known as ImmuMaxx™, CMX is a liquid form daily supplement that boosts your energy level and gives your body and a large amount of nutrition to stay active and healthy.',
+							image: 'assets/img/products/CMX.png',
+							link: 'https://www.google.com/',
+						},
+					]%}
+
+					{% for product in products %}
+						<div class="swiper-slide">
+							{% include "@::templates/components/card-v2.twig" with {
 						image: product.image,
 						cardTitle: product.name,
 						cardText: product.description,
 						cardUrl: product.link,
                 	} %}
-					</div>
-				{% endfor %}
+						</div>
+					{% endfor %}
+				</div>
+				<div class="swiper-pagination"></div>
 			</div>
 		</div>
 	</section>
@@ -267,14 +275,14 @@
 		</div>
 	</section>
 
-	<section class="py-5">
+	<section class="py-5" id="testimonials">
 		<div class="container">
-			<div class="row row-cols-1 row-cols-md-2">
-				<div class="col px-0">
-					<img class="font-img mb-3 mb-md-0" src="assets/img/double-quote.png" />
-					<h3 class="display-3 mb-4 ms-3">TESTIMONIALS</h3>
+			<div class="row d-md-flex justify-content-center">
+				<div class="col-12 col-md-4 mx-auto px-0 px-md-3">
+					<img class="font-img mb-3" src="assets/img/double-quote.png" />
+					<h3 class="display-3 mb-md-4 ms-3">TESTIMONIALS</h3>
 				</div>
-				<div class="col">
+				<div class="col-12 col-md-6 mt-md-5 mt-3">
 					<div class="carousel variant-testimonials swiper-container">
 						<div class="swiper-wrapper">
 							{% set testimonials = [ 
@@ -315,11 +323,11 @@
 		</div>
 	</section>
 
-	<section class="py-5 bg-gray-200">
+	<section class="py-5 bg-gray-200" id="leaders">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="display-3 mb-4 ms-3 text-red text-center">OUR LEADERS</h3>
+					<h3 class="display-3 mb-md-4 ms-3 text-red text-center">OUR LEADERS</h3>
 					<p class="lead text-center">With over 50 years of combined entrepreneurial successes and experiences, our team of leaders know what it takes to create lasting and thriving businesses. Every one of MAXXIMA’s leader stands out from the crowd, not only for their accomplishments, but for their integrity and responsible management as well. At MAXXIMA you will be immediately surrounded with the right people who know what it takes to truly propel you towards your life goals.</p>
 				</div>
 				<div class="d-md-flex justify-content-center">
@@ -358,4 +366,76 @@
 		</div>
 	</section>
 
+	<section class="py-5" id="ourTeam">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h3 class="display-3 mb-md-4 ms-3 text-center">MEET OUR TEAM</h3>
+					<p class="lead text-center">Get to know the masterminds behind our business and the experiences they bring.</p>
+				</div>
+
+				{% set teams  = [
+					{
+						image: 'blank',
+						name: 'Shafigh Suresh Bhaskaran',
+						position: 'Group Accountant',
+						email: 'suresh@maxx.my',
+						description: 'A melticulour and experience senior with a strong history in auditing, financing and accounting. Suresh has led the teams in renowned companies of various industries.'
+					},
+					{
+						image: 'blank',
+						name: 'Erin Kong',
+						position: 'Head of Operations',
+						email: 'erin@maxx.my',
+						description: 'An organised visionary. Erin has thrived in all 16 years of her experience in MLM, from laying down effective SOPs to continuously enhancing the efficiency within the company.'
+					},
+					{
+						image: 'blank',
+						name: 'Yuslaini Binti Yusof',
+						position: 'Head of Distributor Services',
+						email: 'suresh@maxx.my',
+						description: 'Gracious and adaptable, Yus is the gatekeeper of the quality of our services. She is the positive energy that leads our customer service teams and is always trusted to solve problems with tact and swiftness.'
+					}
+				]
+				%}
+
+				{% for team in teams %}
+					<div class="col-md-4 col-12">
+						{% include "@::templates/components/card-v3.twig" with {
+						image: team.image,
+						name: team.name,
+						position: team.position,
+						email: team.email,
+						description: team.description
+					}%}
+					</div>
+				{% endfor %}
+			</div>
+		</div>
+	</section>
+
+	<section class="my-5">
+		{% include "@::templates/components/cta-banner.twig" %}
+	</section>
+
+
+	<section class="py-5">
+		<div class="container-fluid">
+			<div class="row">
+				<div class="maxxima-foundation position-relative">
+					<div class="col-md-8 col-12 maxxima-content">
+						<h3 class="display-3">MAXXIMA FOUNDATION</h3>
+						<p class="lead">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
+					</div>
+					<div class="img-wrapper-1">
+						<img src="assets/img/foundation-1.png" alt="Image of Maxxima foundation" />
+					</div>
+					<div class="img-wrapper-2">
+						<img src="assets/img/foundation-2.png" alt="Image of Maxxima foundation" />
+					</div>
+				</div>
+
+			</div>
+		</div>
+	</section>
 {% endblock %}
