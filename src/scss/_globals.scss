@@ -17,3 +17,103 @@
         margin: -95px 0 0; /* negative fixed header height */
     }
 }
+
+.animated {
+    &.text-slide-in {
+        overflow: hidden;  
+
+        [data-scroll] {
+            display: inline-block;
+            transition: 0.4s ease;
+            line-height: 100%;
+            transform: translateY(60%);
+            opacity: 0;
+            will-change: opacity, transform;
+        }
+
+        [data-scroll="in"] {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        [data-scroll="out"] {
+            opacity: 0;
+            transform: translateY(60%);
+        }
+
+        @for $i from 1 to 20 {
+            [data-scroll="in"]:nth-child(#{$i + 1}) {
+                transition-delay: #{0.05 * $i}s;
+            }
+        }
+    }
+
+    &.fade-in {
+        &[data-scroll] {
+            transition: 0.4s ease;
+            opacity: 0;
+        }
+
+        &[data-scroll="in"] {
+            opacity: 1;
+        }
+
+        &[data-scroll="out"] {
+            opacity: 0;
+        }
+    }
+
+    &.list-item-slide-in {
+        overflow: hidden;
+
+        [data-scroll] {
+            transition: transform 0.8s ease;
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        [data-scroll="in"] {
+            transform: translateY(0);
+            opacity: 1;
+        }
+
+        [data-scroll="out"] {
+            transform: translateY(100%);
+            opacity: 0;
+        }
+
+        @for $i from 1 to 20 {
+            [data-scroll="in"]:nth-child(#{$i + 1}) {
+                transition-delay: #{0.05 * $i}s;
+            }
+        }
+    }
+
+    @include media-breakpoint-up(md) {
+        &.list-item-slide-in-top {
+            overflow: hidden;
+    
+            [data-scroll] {
+                transition: 0.8s ease;
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+    
+            [data-scroll="in"] {
+                transform: translateY(0);
+                opacity: 1;
+            }
+    
+            [data-scroll="out"] {
+                transform: translateY(-100%);
+                opacity: 0;
+            }
+    
+            @for $i from 1 to 20 {
+                [data-scroll="in"]:nth-child(#{$i + 1}) {
+                    transition-delay: #{0.1 * $i}s;
+                }
+            }
+        }
+    }
+}

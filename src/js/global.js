@@ -1,3 +1,5 @@
+import ScrollOut from 'scroll-out';
+
 $(function () {
     var target = $(':target').offset();
     if (typeof target !== 'undefined') {
@@ -7,4 +9,15 @@ $(function () {
     
         $('html, body').animate({ scrollTop: scrollto }, 0);
     }
+})
+
+
+$(function () {
+
+    $('.animated.text-slide-in').each(function () {
+        $(this).html($(this).text().replace(/\S+/g, '<n>$&</n>'))
+        $(this).find('n').attr('data-scroll', true)
+    })
+
+    ScrollOut()
 })
