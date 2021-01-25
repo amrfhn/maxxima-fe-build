@@ -4,16 +4,14 @@
 
 	<section id="home" class="bg-gray-200">
 		{% include "@::templates/components/video-banner.twig" with {
-			description: 'MAXXIMA is an award-winning beauty and wellness company that is driven by the desire to transform lives and ensure that our business has a purpose beyond profit.'
-		} %}
+            description: 'MAXXIMA merupakan sebuah syarikat yang mempunyai misi dan visi yang meletakkan perniagaan mereka mempunyai arah tuju melebihi daripada nilai keuntungan semata-mata.'
+        }%}
 	</section>
 
 	<section class="bg-gray-200 py-6" id="aboutUs">
 		<div class="px-4">
-			<div class="d-md-flex justify-content-center">
-				<h3 class="display-3 text-center animated text-slide-in">WHY CHOOSE</h3>
-				<h3 class="display-3 text-red text-center ms-3 animated text-slide-in">MAXXIMA</h3>
-			</div>
+			<h3 class="display-3 text-center animated text-slide-in d-inline-block">WHY CHOOSE</h3>
+            <h3 class="text-red d-inline-block">MAXXIMA</h3>
 			<p class="text-center lead">We are committed to paving new opportunities for people to live healthier and wealthier every day.</p>
 		</div>
 		<div class="container-fluid px-3 px-md-5 pt-4">
@@ -240,7 +238,7 @@
 						{% for award in awards %}
 							<div class="list-item">
 								<div data-scroll class="animated fade-in ratio ratio-1x1 mx-auto">
-									<img src="{{ award.logo }}" alt="{{ award.altText }}"/>
+									<img src="{{ award.logo }}" alt="{{ award.altText }}" />
 								</div>
 							</div>
 						{% endfor %}
