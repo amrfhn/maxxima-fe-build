@@ -40,4 +40,9 @@
 			}
 		}
 	}
+	.swiper-navigation {
+		.swiper-button-prev, .swiper-button-next {
+			color: $dark;
+		}
+	}
 }
