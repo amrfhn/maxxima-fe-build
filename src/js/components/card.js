@@ -35,3 +35,23 @@ $(function () {
         });
     // }
 })
+
+
+$(function () {
+    var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.test(navigator.userAgent) ? true : false;
+    var cardVar3 = $('.card-variant-3');
+
+    // if (!isMobile) {
+        cardVar3.each(function () {
+            var highestContent = 0;
+    
+            $(cardVar3, this).find('.card-body').each(function () {
+                if ($(this).height() > highestContent) {
+                    highestContent = $(this).height();
+                }
+            });
+    
+            $(cardVar3, this).find('.card-body').height(highestContent);
+        });
+    // }
+})
