@@ -8,6 +8,7 @@ import "./components/carousel/carousel.testimonials";
 import "./components/carousel/carousel.products";
 import "./components/carousel/carousel.card";
 import "./components/card";
+import "./components/scrollspy";
 
 
 // $(function () {

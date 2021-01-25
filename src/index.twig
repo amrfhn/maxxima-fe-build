@@ -1,11 +1,12 @@
 {% extends "@::templates/_layout.twig" %}
 
 {% block main %}
+
 	<section id="home" class="bg-gray-200">
 		{% include "@::templates/components/video-banner.twig" %}
 	</section>
 
-	<section class="bg-gray-200 py-5 pt-md-0" id="aboutUs">
+	<section class="bg-gray-200 py-5" id="aboutUs">
 		<div class="px-4">
 			<h3 class="display-3 text-center">WHY CHOOSE
 				<span class="text-red">MAXXIMA</span>
@@ -432,7 +433,7 @@
 		</div>
 	</section>
 
-	<section class="mt-5">
+	<section class="mt-5" id="career">
 		{% include "@::templates/components/cta-banner.twig" %}
 	</section>
 
