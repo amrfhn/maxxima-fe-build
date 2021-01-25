@@ -72,10 +72,23 @@
 	.img-wrapper {
 		position: absolute;
 		top: -60px;
-		left: 32%;
+		width: 125px;
+		height: 125px;
+		background-color: #fff;
+		left: 29%;
+		border-radius: 100%;
+		border: 1px solid $gray-200;
+		padding: 4px;
+
+		display: flex;
+		justify-content: center;
+
+		box-shadow: 0px 1px 1px 0px #777;
+
 		img {
-			width: 120px;
-			height: 120px;
+			width: 90px;
+			height: 90px;
+			margin-top: 10px;
 		}
 	}
 	.card-body {
