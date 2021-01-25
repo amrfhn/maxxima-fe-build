@@ -6,23 +6,14 @@ $(function () {
     
     createSpy(document.body, '#mainNavigation');
 
-    mql.addEventListener('change', function (e) {
-        const body = document.body;
-
-        if (isMobile !== e.matches) {
-            createSpy(body, '#mainNavigation')
-        }
-        
-        isMobile = e.matches;
-    })
+    
 
     function createSpy (element, targetSelector) {
         const existingInstance = ScrollSpy.getInstance(element);
         existingInstance?.dispose()
         
         new ScrollSpy(element, {
-            target: targetSelector,
-            offset: isMobile ? 60 : 95
+            target: targetSelector
         })
     }
 })
