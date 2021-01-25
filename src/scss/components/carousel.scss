@@ -45,4 +45,13 @@
 			color: $dark;
 		}
 	}
+
+	&.variant-partners {
+
+		@include media-breakpoint-down (sm) {
+			.animated.fade-in[data-scroll] {
+				opacity: 1;
+			}
+		}
+	}
 }

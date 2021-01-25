@@ -32,6 +32,7 @@ $('.carousel.variant-partners').each(function () {
             },
             1200: {
                 slidesPerView: 6,
+                spaceBetween: 60
             }
         },
     })
