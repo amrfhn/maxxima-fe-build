@@ -6,7 +6,7 @@
 		{% include "@::templates/components/video-banner.twig" %}
 	</section>
 
-	<section class="bg-gray-200 py-5" id="aboutUs">
+	<section class="bg-gray-200 py-6" id="aboutUs">
 		<div class="px-4">
 			<h3 class="display-3 text-center">WHY CHOOSE
 				<span class="text-red">MAXXIMA</span>
@@ -38,13 +38,12 @@
                 } %}
 					</div>
 				</div>
-				<div class="swiper-pagination"></div>
-
+				<div class="swiper-pagination d-md-none"></div>
 			</div>
 		</div>
 	</section>
 
-	<section class="py-5" id="ourProduct">
+	<section class="py-6" id="ourProduct">
 		<div class="container-fluid px-3 px-md-5 pt-4 pb-5 position-relative">
 			<div class="two-tiles-container row row-cols-1 row-cols-md-2 g-4">
 				<div class="col">
@@ -128,7 +127,7 @@
 				variant: 'variant-2',
 			} %}
 		</div>
-		<div class="px-4">
+		<div class="px-4 pt-5 mb-4">
 			<h3 class="display-3 text-center">Beauty & Wellness Products</h3>
 			<p class="text-center h3">Elixxi® Beauty + Maxxima Nutrition - XSERIES</p>
 		</div>
@@ -246,7 +245,7 @@
 		</div>
 	</section>
 
-	<section class="bg-gray-200 py-5">
+	<section class="bg-gray-200 py-6">
 		<div class="container">
 			<div class="col-12">
 				<h3 class="display-3 text-center">STRATEGIC PARTNERS</h3>
@@ -294,7 +293,7 @@
 		</div>
 	</section>
 
-	<section class="py-5" id="testimonials">
+	<section class="py-6" id="testimonials">
 		<div class="container">
 			<div class="row d-md-flex justify-content-center">
 				<div class="col-12 col-md-4 mx-auto px-0 px-md-3">
@@ -342,7 +341,7 @@
 		</div>
 	</section>
 
-	<section class="py-5 bg-gray-200" id="leaders">
+	<section class="py-6 bg-gray-200" id="leaders">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -385,7 +384,7 @@
 		</div>
 	</section>
 
-	<section class="py-5" id="ourTeam">
+	<section class="py-6" id="ourTeam">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -421,19 +420,19 @@
 				{% for team in teams %}
 					<div class="col-md-4 col-12">
 						{% include "@::templates/components/card-v3.twig" with {
-						image: team.image,
-						name: team.name,
-						position: team.position,
-						email: team.email,
-						description: team.description
-					}%}
+							image: team.image,
+							name: team.name,
+							position: team.position,
+							email: team.email,
+							description: team.description
+						}%}
 					</div>
 				{% endfor %}
 			</div>
 		</div>
 	</section>
 
-	<section class="mt-5" id="career">
+	<section id="career">
 		{% include "@::templates/components/cta-banner.twig" %}
 	</section>
 
