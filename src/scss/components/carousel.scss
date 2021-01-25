@@ -23,10 +23,8 @@
 		}
 		.swiper-pagination {
 			&.swiper-pagination-bullets {
-				left: -100px;
-				@include media-breakpoint-up(md) {
-					left: -40%;
-				}
+				display: flex;
+				justify-content: start;
 			}
 		}
 	}
