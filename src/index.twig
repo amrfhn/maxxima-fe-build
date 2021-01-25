@@ -193,54 +193,57 @@
 
 	<section class="py-5">
 		<div class="container">
-			<div class="col-12">
-				<h3 class="display-3 text-center animated text-slide-in">AWARDS</h3>
-				<p class="text-center lead sub-title mx-auto">Our efforts and hard work in building the business has brought about significant successes, including recognitions and numerous accolades. Like an upward spiral, the journey in pursuit of greatness has no end. Since 2013, our achievements have been shaped by the strength of the foundations we have set. This is what Maxxima is all about - always raising the bars of excellence.</p>
-			</div>
-			<div class="row row-cols-1 row-cols-md-4 g-0">
-				{% set awards = [
-					{
-						logo: 'assets/img/awards_logo-01.png',
-						altText: 'awards-1'
-					},
-					{
-						logo: 'assets/img/awards_logo-02.png',
-						altText: 'awards-2'
-					},
-					{
-						logo: 'assets/img/awards_logo-03.png',
-						altText: 'awards-3'
-					},
-					{
-						logo: 'assets/img/awards_logo-04.png',
-						altText: 'awards-4'
-					},
-					{
-						logo: 'assets/img/awards_logo-05.png',
-						altText: 'awards-5'
-					},
-					{
-						logo: 'assets/img/awards_logo-06.png',
-						altText: 'awards-6'
-					},
-					{
-						logo: 'assets/img/awards_logo-07.png',
-						altText: 'awards-7'
-					},
-					{
-						logo: 'assets/img/awards_logo-08.png',
-						altText: 'awards-8'
-					}
-				] 
-				%}
-				{% for award in awards %}
-					<div class="col">
-						{% include "@::templates/components/logo-thumbnail.twig" with {
-							logo: award.logo,
-							altText: award.altText
-						}%}
+			<div class="row">
+				<div class="col-12">
+					<h3 class="display-3 text-center animated text-slide-in">AWARDS</h3>
+					<p class="text-center lead sub-title mx-auto">Our efforts and hard work in building the business has brought about significant successes, including recognitions and numerous accolades. Like an upward spiral, the journey in pursuit of greatness has no end. Since 2013, our achievements have been shaped by the strength of the foundations we have set. This is what Maxxima is all about - always raising the bars of excellence.</p>
+				</div>
+				<div class="col-lg-8 offset-lg-2">
+					<div class="list variant-logos">
+						{% set awards = [
+							{
+								logo: 'assets/img/awards_logo-01.png',
+								altText: 'awards-1'
+							},
+							{
+								logo: 'assets/img/awards_logo-02.png',
+								altText: 'awards-2'
+							},
+							{
+								logo: 'assets/img/awards_logo-03.png',
+								altText: 'awards-3'
+							},
+							{
+								logo: 'assets/img/awards_logo-04.png',
+								altText: 'awards-4'
+							},
+							{
+								logo: 'assets/img/awards_logo-05.png',
+								altText: 'awards-5'
+							},
+							{
+								logo: 'assets/img/awards_logo-06.png',
+								altText: 'awards-6'
+							},
+							{
+								logo: 'assets/img/awards_logo-07.png',
+								altText: 'awards-7'
+							},
+							{
+								logo: 'assets/img/awards_logo-08.png',
+								altText: 'awards-8'
+							}
+						] 
+						%}
+						{% for award in awards %}
+							<div class="list-item">
+								<div data-scroll class="animated fade-in ratio ratio-1x1 mx-auto">
+									<img src="{{ award.logo }}" alt="{{ award.altText }}" />
+								</div>
+							</div>
+						{% endfor %}
 					</div>
-				{% endfor %}
+				</div>
 			</div>
 		</div>
 	</section>
