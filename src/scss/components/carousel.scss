@@ -14,5 +14,25 @@
 				}
 			}
 		}
+		.swiper-pagination {
+			&.swiper-pagination-bullets {
+				left: -100px;
+				@include media-breakpoint-up(md) {
+					left: -40%;
+				}
+			}
+		}
+	}
+	.swiper-pagination {
+		&.swiper-pagination-bullets {
+			bottom: 0;
+			.swiper-pagination-bullet {
+				width: 15px;
+				height: 15px;
+			}
+			.swiper-pagination-bullet-active {
+				background-color: $red;
+			}
+		}
 	}
 }

@@ -1,11 +1,11 @@
 {% extends "@::templates/_layout.twig" %}
 
 {% block main %}
-	<section id="home">
+	<section id="home" class="bg-gray-200">
 		{% include "@::templates/components/video-banner.twig" %}
 	</section>
 
-	<section class="bg-gray-200 py-5" id="aboutUs">
+	<section class="bg-gray-200 py-5 pt-md-0" id="aboutUs">
 		<div class="px-4">
 			<h3 class="display-3 text-center">WHY CHOOSE
 				<span class="text-red">MAXXIMA</span>
@@ -13,7 +13,7 @@
 			<p class="text-center lead">We are committed to paving new opportunities for people to live healthier and wealthier every day.</p>
 		</div>
 		<div class="container-fluid px-3 px-md-5 pt-4">
-			<div class="carousel variant-card1 swiper-container">
+			<div class="carousel variant-card1 swiper-container pb-5 pb-md-0">
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
@@ -134,7 +134,7 @@
 
 
 		<div class="container-fluid px-3 px-md-5 pt-4">
-			<div class="carousel variant-products swiper-container">
+			<div class="carousel variant-products swiper-container pb-5 pb-md-0">
 				<div class="swiper-wrapper">
 					{% set products = [
 						{
@@ -283,7 +283,7 @@
 					<h3 class="display-3 mb-md-4 ms-3">TESTIMONIALS</h3>
 				</div>
 				<div class="col-12 col-md-6 mt-md-5 mt-3">
-					<div class="carousel variant-testimonials swiper-container">
+					<div class="carousel variant-testimonials swiper-container pb-5">
 						<div class="swiper-wrapper">
 							{% set testimonials = [ 
 								{
@@ -414,16 +414,16 @@
 		</div>
 	</section>
 
-	<section class="my-5">
+	<section class="mt-5">
 		{% include "@::templates/components/cta-banner.twig" %}
 	</section>
 
 
-	<section class="py-5">
+	<section class="py-5 bg-gray-200">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="maxxima-foundation position-relative">
-					<div class="col-md-8 col-12 maxxima-content">
+					<div class="col-md-8 col-12 maxxima-content pt-5">
 						<h3 class="display-3">MAXXIMA FOUNDATION</h3>
 						<p class="lead">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
 					</div>
@@ -434,8 +434,19 @@
 						<img src="assets/img/foundation-2.png" alt="Image of Maxxima foundation" />
 					</div>
 				</div>
-
 			</div>
 		</div>
 	</section>
+
+	<section class="py-5 border-top">
+		<div class="container">
+			<div class="row">
+				<div class="col-12">
+					<h3 class="display-3 mb-md-4 ms-3 text-center">CONTACT US</h3>
+					{% include "@::templates/components/form.twig" %}
+				</div>
+			</div>
+		</div>
+	</section>
+
 {% endblock %}
