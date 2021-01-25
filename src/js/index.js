@@ -11,12 +11,11 @@ import "./components/carousel/carousel.card";
 import "./components/card";
 
 
+// $(function () {
+//     console.log('Document ready!')
+// })
 
 
-
-$(function () {
-    console.log('Document ready!')
-})
 
 if (module.hot) {
     module.hot.accept()

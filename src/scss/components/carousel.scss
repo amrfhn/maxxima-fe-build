@@ -1,4 +1,11 @@
 .carousel {
+	&.variant-products {
+		.swiper-pagination {
+			&.swiper-pagination-bullets {
+				bottom: 5px;
+			}
+		}
+	}
 	&.variant-testimonials {
 		.swiper-slide {
 			.testimonials-details {
@@ -12,6 +19,26 @@
 						height: 108px;
 					}
 				}
+			}
+		}
+		.swiper-pagination {
+			&.swiper-pagination-bullets {
+				left: -100px;
+				@include media-breakpoint-up(md) {
+					left: -40%;
+				}
+			}
+		}
+	}
+	.swiper-pagination {
+		&.swiper-pagination-bullets {
+			bottom: 0;
+			.swiper-pagination-bullet {
+				width: 15px;
+				height: 15px;
+			}
+			.swiper-pagination-bullet-active {
+				background-color: $red;
 			}
 		}
 	}

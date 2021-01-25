@@ -1,0 +1,19 @@
+form {
+	&.contact-form {
+		.form-label {
+			margin-bottom: 0;
+		}
+		.form-control {
+			border-bottom: 2px solid #d8d8d8;
+
+			&:focus {
+				color: #231f20;
+				background-color: #fff;
+				border-color: #fff;
+				outline: 0;
+				box-shadow: none;
+				border-bottom: 2px solid #d8d8d8;
+			}
+		}
+	}
+}
