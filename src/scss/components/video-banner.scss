@@ -1,6 +1,7 @@
 
 .banner.type-video {
 	position: relative;
+	background-color: $dark;
 
 	.video-container {
 		--aspect-ratio: calc(16 / 9 * 100%);
