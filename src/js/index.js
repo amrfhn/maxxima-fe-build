@@ -10,12 +10,7 @@ import "./components/carousel/carousel.card";
 import "./components/carousel/carousel.partners";
 import "./components/card";
 import "./components/scrollspy";
-
-
-// $(function () {
-//     console.log('Document ready!')
-// })
-
+import "./components/navbar";
 
 
 if (module.hot) {
