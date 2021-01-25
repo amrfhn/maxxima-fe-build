@@ -26,8 +26,9 @@
             display: inline-block;
             transition: 0.4s ease;
             line-height: 100%;
-            transform: translateY(50%);
+            transform: translateY(60%);
             opacity: 0;
+            will-change: opacity, transform;
         }
 
         [data-scroll="in"] {
@@ -37,7 +38,7 @@
 
         [data-scroll="out"] {
             opacity: 0;
-            transform: translateY(50%);
+            transform: translateY(60%);
         }
 
         @for $i from 1 to 20 {
