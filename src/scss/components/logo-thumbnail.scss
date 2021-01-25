@@ -1,17 +1,28 @@
+.logo-wrapper {
+	width: calc(100% / 3);
+	@include media-breakpoint-up(lg) {
+		width: calc(100% / 4);
+	}
+}
+
 .logo-thumbnail {
-	width: 200px;
-	height: 200px;
+	width: 120px;
+	height: 120px;
+	@include media-breakpoint-up(lg) {
+		width: 200px;
+		height: 200px;
+	}
 
 	img {
 		width: 100%;
 	}
 
 	&.partners-thumbnail {
-        width: 78px;
-            height: 78px;
-		@include media-breakpoint-up(lg) {
-            width: 112px;
-            height: 112px;
-		}
+		// width: 78px;
+		// height: 78px;
+		// @include media-breakpoint-up(lg) {
+		width: 112px;
+		height: 112px;
+		// }
 	}
 }
