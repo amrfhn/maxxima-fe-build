@@ -6,7 +6,7 @@ var isMobile = /Android|webOS|iPhone|iPad|iPod|BlackBerry|IEMobile|Opera Mini/i.
 $('.carousel.variant-products').each(function () {
     let $element = $(this);
 
-    var numSlides = $element.find('.swiper-container .swiper-slide').length;
+    var numSlides = $element.find('.swiper-wrapper .swiper-slide').length;
     if (numSlides <= 3 && !isMobile) {
         $element.find('.swiper-pagination').addClass('d-none')
     }
@@ -17,13 +17,17 @@ $('.carousel.variant-products').each(function () {
         pagination: {
             el: $element.find('.swiper-pagination').get(0),
             type: 'bullets',
+            clickable: true
         },
         breakpoints: {
             768: {
                 slidesPerView: 3,
+                slidesPerGroup: 3,
             },
             1200: {
                 slidesPerView: 3,
+                slidesPerGroup: 3,
+
             }
         },
     })

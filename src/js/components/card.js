@@ -31,7 +31,7 @@ $(function () {
                 }
             });
     
-            $(cardVar2, this).find('.card-text').height(highestContent + 16);
+            $(cardVar2, this).find('.card-text').height(highestContent + 4);
         });
     // }
 })

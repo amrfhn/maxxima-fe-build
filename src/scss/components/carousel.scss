@@ -1,4 +1,11 @@
 .carousel {
+	&.variant-products {
+		.swiper-pagination {
+			&.swiper-pagination-bullets {
+				bottom: 5px;
+			}
+		}
+	}
 	&.variant-testimonials {
 		.swiper-slide {
 			.testimonials-details {

@@ -16,6 +16,7 @@ $('.carousel.variant-testimonials').each(function () {
         pagination: {
             el: $element.find('.swiper-pagination').get(0),
             type: 'bullets',
+            clickable: true
         },
         breakpoints: {
             768: {

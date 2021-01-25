@@ -53,7 +53,7 @@ header {
 			}
 			.nav-link {
 				margin-bottom: 10px;
-				padding: 10px 0 0;
+				// padding: 10px 0 0;
 				font-weight: 700;
 				color: #1a1a1a;
 				font-size: 18px;
@@ -91,6 +91,23 @@ header {
 					}
 				}
 			}
+		}
+	}
+	.right-nav {
+		margin-top: 1rem;
+		@include media-breakpoint-up(lg) {
+			margin-top: -7px;
+		}
+		
+
+		.language-link {
+			&:hover {
+				color: #1a1a1a;
+			}
+		}
+
+		.contact-btn {
+			margin-top: -5px;
 		}
 	}
 
