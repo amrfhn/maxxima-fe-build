@@ -192,54 +192,57 @@
 
 	<section class="py-5">
 		<div class="container">
-			<div class="col-12">
-				<h3 class="display-3 text-center animated text-slide-in">AWARDS</h3>
-				<p class="text-center lead sub-title mx-auto">Our efforts and hard work in building the business has brought about significant successes, including recognitions and numerous accolades. Like an upward spiral, the journey in pursuit of greatness has no end. Since 2013, our achievements have been shaped by the strength of the foundations we have set. This is what Maxxima is all about - always raising the bars of excellence.</p>
-			</div>
-			<div class="d-flex justify-content-center flex-wrap">
-				{% set awards = [
-					{
-						logo: 'assets/img/awards_logo-01.png',
-						altText: 'awards-1'
-					},
-					{
-						logo: 'assets/img/awards_logo-02.png',
-						altText: 'awards-2'
-					},
-					{
-						logo: 'assets/img/awards_logo-03.png',
-						altText: 'awards-3'
-					},
-					{
-						logo: 'assets/img/awards_logo-04.png',
-						altText: 'awards-4'
-					},
-					{
-						logo: 'assets/img/awards_logo-05.png',
-						altText: 'awards-5'
-					},
-					{
-						logo: 'assets/img/awards_logo-06.png',
-						altText: 'awards-6'
-					},
-					{
-						logo: 'assets/img/awards_logo-07.png',
-						altText: 'awards-7'
-					},
-					{
-						logo: 'assets/img/awards_logo-08.png',
-						altText: 'awards-8'
-					}
-				] 
-				%}
-				{% for award in awards %}
-					<div class="logo-wrapper">
-						{% include "@::templates/components/logo-thumbnail.twig" with {
-							logo: award.logo,
-							altText: award.altText
-						}%}
+			<div class="row">
+				<div class="col-12">
+					<h3 class="display-3 text-center animated text-slide-in">AWARDS</h3>
+					<p class="text-center lead sub-title mx-auto">Our efforts and hard work in building the business has brought about significant successes, including recognitions and numerous accolades. Like an upward spiral, the journey in pursuit of greatness has no end. Since 2013, our achievements have been shaped by the strength of the foundations we have set. This is what Maxxima is all about - always raising the bars of excellence.</p>
+				</div>
+				<div class="col-lg-8 offset-lg-2">
+					<div class="list variant-logos">
+						{% set awards = [
+							{
+								logo: 'assets/img/awards_logo-01.png',
+								altText: 'awards-1'
+							},
+							{
+								logo: 'assets/img/awards_logo-02.png',
+								altText: 'awards-2'
+							},
+							{
+								logo: 'assets/img/awards_logo-03.png',
+								altText: 'awards-3'
+							},
+							{
+								logo: 'assets/img/awards_logo-04.png',
+								altText: 'awards-4'
+							},
+							{
+								logo: 'assets/img/awards_logo-05.png',
+								altText: 'awards-5'
+							},
+							{
+								logo: 'assets/img/awards_logo-06.png',
+								altText: 'awards-6'
+							},
+							{
+								logo: 'assets/img/awards_logo-07.png',
+								altText: 'awards-7'
+							},
+							{
+								logo: 'assets/img/awards_logo-08.png',
+								altText: 'awards-8'
+							}
+						] 
+						%}
+						{% for award in awards %}
+							<div class="list-item">
+								<div data-scroll class="animated fade-in ratio ratio-1x1 mx-auto">
+									<img src="{{ award.logo }}" alt="{{ award.altText }}" />
+								</div>
+							</div>
+						{% endfor %}
 					</div>
-				{% endfor %}
+				</div>
 			</div>
 		</div>
 	</section>
@@ -461,7 +464,7 @@
 		<div class="container-fluid">
 			<div class="row">
 				<div class="maxxima-foundation position-relative">
-					<div class="col-md-8 col-12 maxxima-content pt-5">
+					<div class="col-md-8 col-12 maxxima-content pt-6 pt-md-5">
 						<h3 class="display-3 animated text-slide-in">MAXXIMA FOUNDATION</h3>
 						<p class="lead">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
 					</div>

@@ -1,0 +1,15 @@
+.list.variant-logos {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .list-item {
+        width: calc(100% / 3);
+    }
+    
+    @include media-breakpoint-up (lg) {
+        .list-item {
+            width: calc(100% / 4);
+        }
+    }
+}
