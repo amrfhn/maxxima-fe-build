@@ -1,7 +1,9 @@
+import { Collapse } from 'bootstrap';
+
 $(function () {
     const $header = $('#mainNavigation');
     const mql = window.matchMedia('(min-width: 768px)');
-    let isMobile = mql.matches;
+    let isMobile = !mql.matches;
     
     $('#mainNavigation .nav-item .nav-link')
         .on('click', function (e) {
@@ -13,5 +15,10 @@ $(function () {
                 top: $target.offset().top - $header.height(),
                 behavior: 'smooth'
             })
+
+            if (isMobile) {
+                const collapseInstance = Collapse.getInstance($('#navbarToggler').get(0));
+                collapseInstance.hide()
+            }
         })
 })
