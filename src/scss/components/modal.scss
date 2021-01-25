@@ -1,5 +1,14 @@
 .modal {
 	top: 16%;
+
+	&.fade .modal-dialog {
+		transform: translateY(10px) scale(0.9);
+	}
+
+	&.show .modal-dialog {
+		transform: none;
+	}
+
 	.modal-dialog {
 		.modal-content {
 			box-shadow: 0 2.8px 2.2px rgba(0, 0, 0, 0.034),
