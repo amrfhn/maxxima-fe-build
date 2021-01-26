@@ -460,12 +460,12 @@
 						name: 'Nelly Nazir',
 						position: 'Head of Marketing Communications',
 						email: 'nelly@maxx.my',
-						description: 'Striking a balance between strategy and creativity, Nelly is an expert in both traditional and digital advertising. In her 15 years of experience, she has managed local and even international portfolios.'
+						description: 'Striking a balance between strategy and creativity, Nelly is an expert in marketing, advertising and promotion in both traditional and digital landscapes. In her 15 years of experience, she has managed local and even international portfolios.'
 					},
 					{
 						image: 'eddie',
 						name: 'Zamri Durahman',
-						position: 'Head of Logistic Department',
+						position: 'Head of Logistic & Warehouse',
 						email: 'zamri@maxx.my',
 						description: 'Skilled in customer service and warehouse operations, Zamri leads his team to achieve high levels of customer satisfaction and assuring the quality of goods for the company.'
 					},
@@ -516,17 +516,25 @@
 		{% include "@::templates/components/cta-banner.twig" with {
 			subTitle: 'Want to become a MAXXIMA Business Associate?',
 			title: 'EXPLORE LIMITLESS BUSINESS WITH US',
-			ctaLabel: 'Tell Me More'
+			ctaLabel: 'Tell Me More',
+			modalModel: {
+				title: 'Interested to be<br>Our Associate?',
+				description: 'Fill up this form & we will get back to you.',
+				nameLabel: 'Name',
+				phoneLabel: 'Mobile No.',
+				emailLabel: 'Email',
+				sendButtonLabel: 'Send'
+			}
 		} %}
 	</section>
 
-	<section class="py-5 bg-gray-200">
+	<section class="py-5 bg-gray-200 overflow-hidden">
 		<div class="container-fluid">
 			<div class="row">
 				<div class="maxxima-foundation position-relative">
-					<div class="col-md-8 col-12 maxxima-content pt-6 pt-md-5">
-						<h3 class="display-3 text-center text-md-start animated text-slide-in">MAXXCARE FOUNDATION</h3>
-						<p class="lead text-center text-md-start">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
+					<div class="col-md-8 col-12 maxxima-content">
+						<h3 class="display-3 animated text-slide-in">MAXXCARE FOUNDATION</h3>
+						<p class="lead mb-0">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
 					</div>
 					<div class="img-wrapper-1">
 						<img src="assets/img/foundation-1.png" alt="Image of Maxxima foundation" />

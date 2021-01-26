@@ -36,6 +36,12 @@
 		// 	font-size: .15em;
 		// }
 
+		@media (max-width: 376px) {
+			.card-text {
+				font-size: 17px;
+			}
+		}
+
 		.icon-wrapper {
 			position: relative;
 			transition: all 0.5s ease;

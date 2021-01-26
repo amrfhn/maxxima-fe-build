@@ -1,25 +1,31 @@
 .maxxima-foundation {
-	min-height: 320px;
+	min-height: 400px;
+	display: flex;
+	flex-direction: column;
+	justify-content: center;
 
-	.maxxima-content {
-		@include media-breakpoint-up(md) {
+	@include media-breakpoint-up(md) {
+		min-height: 480px;
+
+		.maxxima-content {
 			padding-left: 100px;
-			margin-top: 15px;
 		}
 	}
+
 	.img-wrapper-1 {
 		position: absolute;
 		left: -20px;
 		bottom: -50px;
 
 		@include media-breakpoint-up(md) {
-			// width: 22px;
+			
+			bottom: -100px;
 		}
 
 		img {
-            width: 16px;
+            width: 20px;
             @include media-breakpoint-up(md) {
-                width: 50px;
+                width: 80px;
             }
 		}
 	}
@@ -34,7 +40,7 @@
 		}
 
 		img {
-			width: 100px;
+			width: 140px;
 
 			@include media-breakpoint-up(md) {
 				width: 400px;
