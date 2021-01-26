@@ -28,10 +28,11 @@
 	<section class="bg-gray-200 py-6" id="aboutUs">
 		<div class="px-4">
 			<div class="d-md-flex justify-content-center">
-				<h3 class="display-3 text-center animated text-slide-in">WHY CHOOSE</h3>
-				<h3 class="display-3 text-red text-center ms-3 animated text-slide-in">MAXXIMA</h3>
+				<h3 class="display-3 text-center animated text-slide-in">Kenapa</h3>
+				<h3 class="display-3 text-red text-center ms-3 animated text-slide-in">MAXXIMA </h3>
+				<h3 class="display-3 text-center animated text-slide-in">?</h3>
 			</div>
-			<p class="text-center lead">We are committed to paving new opportunities for people to live healthier and wealthier every day.</p>
+			<p class="text-center lead">Kami komited untuk mencipta peluang dan platform <br class="d-none d-md-block"/>agar masyarakat dapat menjalani kehidupan yang lebih sihat dan menjana pendapatan lebih lumayan.</p>
 		</div>
 		<div class="container-fluid px-3 px-md-5 pt-4">
 			<div class="carousel variant-card1 swiper-container pb-5 pb-md-0">
@@ -100,9 +101,9 @@
 				</div>
 				<div class="col d-md-block d-none">
 					{% include "@::templates/components/line-separator.twig" %}
-					<p class="lead">Diasaskan oleh usahawan berpengalaman dan berjaya, MAXXIMA telah berjaya membuktikan kualiti dan prestasi syarikat yang begitu tinggi dengan merangkul pelbagai anugerah di peringkat kebangsaan dan antarabangsa di bawah industri kecantikan dan kesihatan,.</p>
-					<p class="lead">Teras misi perniagaan kami adalah untuk mengubah kehidupan. Kami berhasrat untuk membantu menambah baik taraf kehidupan rakan niaga dan juga pengguna kami dari segi kewangan dan gaya hidup. Oleh demikian, kami sentiasa meletakkan komitmen untuk mengembang dan meningkatkan prestasi perniagaan kepada masyarakat.</p>
-					<p class="lead">Dengan menimba lebih banyak pengalaman, menambahbaik inovasi saintifik, menawarkan produk gaya hidup terkini, dan meletakkan kawalan kualiti yang tinggi, MAXXIMA terus meneroka jalan baharu agar masyarakat dapat menjalani kehidupan yang lebih sihat dan berkualiti.</p>
+					<p class="lead text-justify">Diasaskan oleh usahawan berpengalaman dan berjaya, MAXXIMA telah berjaya membuktikan kualiti dan prestasi syarikat yang begitu tinggi dengan merangkul pelbagai anugerah di peringkat kebangsaan dan antarabangsa di bawah industri kecantikan dan kesihatan,.</p>
+					<p class="lead text-justify">Teras misi perniagaan kami adalah untuk mengubah kehidupan. Kami berhasrat untuk membantu menambah baik taraf kehidupan rakan niaga dan juga pengguna kami dari segi kewangan dan gaya hidup. Oleh demikian, kami sentiasa meletakkan komitmen untuk mengembang dan meningkatkan prestasi perniagaan kepada masyarakat.</p>
+					<p class="lead text-justify">Dengan menimba lebih banyak pengalaman, menambahbaik inovasi saintifik, menawarkan produk gaya hidup terkini, dan meletakkan kawalan kualiti yang tinggi, MAXXIMA terus meneroka jalan baharu agar masyarakat dapat menjalani kehidupan yang lebih sihat dan berkualiti.</p>
 				</div>
 			</div>
 
@@ -201,6 +202,7 @@
 						cardTitle: product.name,
 						cardText: product.description,
 						cardUrl: product.link,
+						ctaLabel: 'KETAHUI LEBIH LANJUT'
                 	} %}
 						</div>
 					{% endfor %}
@@ -396,17 +398,17 @@
 						set leaders = [
 							{
 								name: 'Dato’ Dr. Reza Ibrahim',
-								position: 'Founder/CEO',
+								position: 'Pengasas/Ketua Pegawai',
 								image: 'reza-ibrahim'
 							},
 							{
 								name: 'Mr. Saiffil Fariz',
-								position: 'Co-Founder/CTO',
+								position: 'Pengasas Bersama/Ketua Pegawai Teknologi',
 								image: 'saiffil-fariz'
 							},
 							{
 								name: 'Dato Abu Samah',
-								position: 'Chairman',
+								position: 'Pengerusi',
 								image: 'abu-samah'
 							}
 						]
@@ -432,65 +434,65 @@
 			<div class="row">
 				<div class="col-12">
 					<h3 class="display-3 mb-md-4 ms-3 text-center animated text-slide-in">KENALI BARISAN KEPIMPINAN KAMI</h3>
-					<p class="lead text-center">Kenali dalang di sebalik perniagaan kami dan pengalaman yang mereka bawa.</p>
+					<p class="lead text-center">Kenali arkitek di sebalik perniagaan kami dan pengalaman yang mereka bawa.</p>
 				</div>
 
 				{% set teams  = [
 					{
 						image: 'suresh',
 						name: 'Shafigh Suresh Bhaskaran',
-						position: 'Group Accountant',
+						position: 'Akauntan Kumpulan',
 						email: 'suresh@maxx.my',
-						description: 'A melticulour and experience senior with a strong history in auditing, financing and accounting. Suresh has led the teams in renowned companies of various industries.'
+						description: 'Seorang senior yang teliti dan berpengalaman dalam bidang pengauditan, pembiayaan dan perakaunan. Suresh telah memimpin pasukan dalam syarikat terkenal dari pelbagai industri.'
 					},
 					{
 						image: 'erin',
 						name: 'Erin Kong',
-						position: 'Head of Operations',
+						position: 'Ketua Operasi',
 						email: 'erin@maxx.my',
-						description: 'An organised visionary. Erin has thrived in all 16 years of her experience in MLM, from laying down effective SOPs to continuously enhancing the efficiency within the company.'
+						description: 'Seorang yang berwawasan dan teratur. Erin telah berkecimpung di dalam industri MLM selama 16 tahun. Bermula dari menstruktur SOP yang berkesan hingga seterusnya meningkatkan produktiviti dalam syarikat.'
 					},
 					{
 						image: 'yus',
 						name: 'Yuslaini Binti Yusof',
-						position: 'Head of Distributor Services',
+						position: 'Ketua Perkhidmatan Pengedar',
 						email: 'yus@maxx.my',
-						description: 'Gracious and adaptable, Yus is the gatekeeper of the quality of our services. She is the positive energy that leads our customer service teams and is always trusted to solve problems with tact and swiftness.'
+						description: 'Merupakan seorang yang ramah dan mudah didekati, Yus adalah orang penting dalam menjamin kualiti tinggi perkhidmatan syarikat. Beliau juga mahir dalam memimpin pasukan perkhidmatan pelanggan dan diberi kepercayaan untuk menyelesaikan masalah dengan bijak dan pantas.'
 					},
 					{
 						image: 'nelly',
 						name: 'Nelly Nazir',
-						position: 'Head of Marketing Communications',
+						position: 'Ketua Komunikasi Pemasaran',
 						email: 'nelly@maxx.my',
-						description: 'Striking a balance between strategy and creativity, Nelly is an expert in both traditional and digital advertising. In her 15 years of experience, she has managed local and even regional clients.'
+						description: 'Seorang yang mampu mengenal pasti antara strategi dan kreativiti, Nelly adalah pakar dalam pengiklanan tradisional dan digital. Beliau juga telah mengurus ramai pelanggan dari tempatan dan juga global dalam 15 tahun pengalamannya.'
 					},
 					{
 						image: 'eddie',
 						name: 'Zamri Bin Durahman',
-						position: 'Head of Logistic Department',
+						position: 'Ketua Jabatan Logistik',
 						email: 'zamri@maxx.my',
-						description: 'Skilled in customer service and warehouse operations, Zamri leads his team to achieve high levels of customer satisfaction and assuring the quality of goods for the company.'
+						description: 'Mahir dalam khidmat pelanggan dan operasi gudang, Zamri mempunyai kepakaran dalam memimpin pasukannya untuk memberi tahap kepuasan pelanggan yang tinggi dan menjamin kualiti barang untuk syarikat.'
 					},
 					{
 						image: 'azam',
 						name: 'Khamarul Azam Sulaiman',
-						position: 'Head of Branch',
+						position: 'Ketua Cawangan',
 						email: 'azam@maxx.my',
-						description: 'Articulate and analytical, Azam is tasked to lead his team to excellence with his branch managing experience in an array of industries, from retail to restaurants and hotels.'
+						description: 'Seorang artikulasi dan analitis, Azam ditugaskan untuk memimpin pasukannya dengan cemerlang serta mempunyai pengalaman dalam mengurus cawangan di pelbagai industri, dari runcit hingga restoran dan hotel.'
 					},
 					{
 						image: 'prasad',
 						name: 'Prasad Dass',
-						position: 'Head of Human Resources',
+						position: 'Ketua Sumber Manusia',
 						email: 'prasad@maxx.my',
-						description: 'Versatile and strategic, Prasad holds a 26-year long proven track record of building successful HR departments in various companies, including MNC\'s, PLC\'s and locally owned companies.'
+						description: "Seorang yang versatil dan strategik, Prasad memegang rekod prestasi yang telah terbukti cemerlang selepas 26 tahun melibatkan diri dalam jabatan HR di pelbagai syarikat, termasuk syarikat MNC, PLC dan syarikat tempatan."
 					},
 					{
 						image: 'yap',
 						name: 'Hanna Yap Siew Haan',
-						position: 'Head of Facilities Management',
+						position: 'Ketua Pengurusan Fasiliti',
 						email: 'hanna@maxx.my',
-						description: 'A diligent coordinator, Hanna keeps the keeps the rhythm of the company. She manages internal and external liaison to ensure that all processes adhere to quality standards and regulations.'
+						description: 'Seorang penyelaras yang rajin, Hanna merupakan salah seorang individu penting di sebalik prestasi syarikat. Dia menguruskan hubungan dalaman dan luaran untuk memastikan proses mematuhi standard dan kualiti.'
 					}
 				]
 				%}
@@ -513,7 +515,8 @@
 	<section id="career">
 		{% include "@::templates/components/cta-banner.twig" with {
 			subTitle: 'Berminat untuk sertai Rakan Niaga MAXXIMA?',
-			title: 'RASAI PENGALAMAN PERNIAGAAN TANPA HAD BERSAMA KAMI!'
+			title: 'RASAI PENGALAMAN PERNIAGAAN TANPA HAD BERSAMA KAMI!',
+			ctaLabel: 'Ketahui Lebih Lanjut'
 		} %}
 	</section>
 

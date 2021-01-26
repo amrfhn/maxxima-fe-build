@@ -66,6 +66,10 @@ h5 {
 	font-weight: 700;
 }
 
+.text-justify {
+	text-align: justify;
+}
+
 .sub-title {
 	@include media-breakpoint-up(lg) {
 		width: 83%;
