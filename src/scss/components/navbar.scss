@@ -57,9 +57,12 @@ header {
 				font-weight: 700;
 				color: #1a1a1a;
 				font-size: 18px;
-
+				font-family: 'Quicksand', sans-serif;
+				font-weight: 500;
+				
 				&.active {
 					border-bottom: 2px solid $red;
+					font-weight: 700;
 				}
 			}
 			&.red-nav-item {
