@@ -271,61 +271,55 @@
 
 	<section class="bg-gray-200 py-6">
 		<div class="container">
-			<div class="col-12">
-				<h3 class="display-3 text-center animated text-slide-in">RAKAN STRATEGIK</h3>
-				<p class="text-center lead sub-title mx-auto">Prestasi cemerlang kami dalam mengurus perniagaan telah menarik banyak minat di peringkat global untuk menjalinkan kerjasama dalam misi menjadikan produk dan servis MAXXIMA berada di tahap optimum. Kami didorong untuk membina asas yang teguh demi mencapai kecemerlangan yang lebih tinggi.</p>
-			</div>
-
-			<div class="carousel variant-partners swiper-container">
-				<div class="swiper-wrapper">
-					{% set partners = [
-						{
-							logo: 'assets/img/strategic-partners_logo-01.png',
-							altText: 'partners-1'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-02.png',
-							altText: 'partners-2'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-03.png',
-							altText: 'partners-3'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-04.png',
-							altText: 'partners-4'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-05.png',
-							altText: 'partners-5'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-06.png',
-							altText: 'partners-6'
-						},
-					]%}
-					{% for partner in partners %}
-						<div class="swiper-slide">
-							{% include "@::templates/components/logo-thumbnail.twig" with {
-						logo: partner.logo,
-						altText: partner.altText,
-						variant: 'partners-thumbnail'
-					}%}
-						</div>
-					{% endfor %}
+			<div class="row">
+				<div class="col-12">
+					<h3 class="display-3 text-center animated text-slide-in">RAKAN STRATEGIK</h3>
+					<p class="text-center lead sub-title mx-auto">Prestasi cemerlang kami dalam mengurus perniagaan telah menarik banyak minat di peringkat global untuk menjalinkan kerjasama dalam misi menjadikan produk dan servis MAXXIMA berada di tahap optimum. Kami didorong untuk membina asas yang teguh demi mencapai kecemerlangan yang lebih tinggi.</p>
 				</div>
-				<div class="swiper-navigation d-md-none">
-					<div class="swiper-button-prev">
-						{% include "@::templates/components/icon.twig" with {
-                            iconName: 'chevron-left',
-                            iconSize: 's'
-                        } %}
-					</div>
-					<div class="swiper-button-next">
-						{% include "@::templates/components/icon.twig" with {
-                            iconName: 'chevron-right',
-                            iconSize: 's'
-                        } %}
+				<div class="col-lg-10 offset-lg-1">
+					<div class="list variant-partners">
+						{% set partners = [
+							{
+								logo: 'assets/img/strategic-partners_logo-01.png',
+								altText: 'partners-1'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-02.png',
+								altText: 'partners-2'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-03.png',
+								altText: 'partners-3'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-04.png',
+								altText: 'partners-4'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-05.png',
+								altText: 'partners-5'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-06.png',
+								altText: 'partners-6'
+							},
+							{
+								logo: 'assets/img/partners/qurate.png',
+								altText: 'Qurate'
+							},
+							{
+								logo: 'assets/img/partners/nexus-wise.png',
+								altText: 'Nexus Wise'
+							},
+						]%}
+						{% for partner in partners %}
+							<div class="list-item">
+								{% include "@::templates/components/logo-thumbnail.twig" with {
+									logo: partner.logo,
+									altText: partner.altText
+								}%}
+							</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>

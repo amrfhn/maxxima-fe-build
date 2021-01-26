@@ -1,0 +1,19 @@
+.list.variant-partners {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+
+    .list-item {
+        width: calc(100% / 3);
+    }
+    
+    @include media-breakpoint-up (lg) {
+        .list-item {
+            width: calc(100% / 6);
+
+            .logo-thumbnail {
+                height: 120px;
+            }
+        }
+    }
+}
