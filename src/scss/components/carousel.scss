@@ -5,6 +5,13 @@
 				bottom: 5px;
 			}
 		}
+		&.type-bm {
+			.card-text {
+				@include media-breakpoint-up(md) {
+					min-height: 290px;
+				}
+			}
+		}
 	}
 	&.variant-testimonials {
 		.swiper-slide {
@@ -41,14 +48,14 @@
 		}
 	}
 	.swiper-navigation {
-		.swiper-button-prev, .swiper-button-next {
+		.swiper-button-prev,
+		.swiper-button-next {
 			color: $dark;
 		}
 	}
 
 	&.variant-partners {
-
-		@include media-breakpoint-down (sm) {
+		@include media-breakpoint-down(sm) {
 			.animated.fade-in[data-scroll] {
 				opacity: 1;
 			}
