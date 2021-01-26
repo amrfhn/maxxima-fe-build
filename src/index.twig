@@ -25,7 +25,7 @@
 		} %}
 	</section>
 
-	<section class="bg-gray-200 py-6" id="aboutUs">
+	<section class="bg-gray-200 py-6" >
 		<div class="px-4">
 			<div class="d-flex flex-wrap justify-content-center">
 				<h3 class="display-3 text-center animated text-slide-in">WHY CHOOSE</h3>
@@ -63,7 +63,7 @@
 		</div>
 	</section>
 
-	<section class="py-6" id="ourProduct">
+	<section class="py-6" id="aboutUs">
 		<div class="container-fluid px-3 px-md-5 pt-4 pb-5 position-relative">
 			<div class="two-tiles-container row row-cols-1 row-cols-md-2 g-4">
 				<div class="col">
@@ -101,32 +101,32 @@
 				</div>
 				<div class="col d-md-block d-none">
 					{% include "@::templates/components/line-separator.twig" %}
-					<p class="lead">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
-					<p class="lead">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
-					<p class="lead">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
+					<p class="lead text-justify">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
+					<p class="lead text-justify">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
+					<p class="lead text-justify">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
 				</div>
 			</div>
 
 			<div class="row d-md-none d-flex">
-				<div class="col-6">
+				<div class="col-12">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '200k+',
 						text: 'Successful Business Associates',
 					} %}
 				</div>
-				<div class="col-6">
+				<div class="col-12">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '100m+',
 						text: 'Total Weekly Commissions Paid',
 					} %}
 				</div>
-				<div class="col-6">
+				<div class="col-12">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '4+	',
 						text: 'Strong SEA Presence',
 					} %}
 				</div>
-				<div class="col-6">
+				<div class="col-12">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '10+',
 						text: 'Quality Products',
@@ -136,9 +136,9 @@
 				<div class="col">
 					{% include "@::templates/components/line-separator.twig" %}
 
-					<p class="lead">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
-					<p class="lead">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
-					<p class="lead">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
+					<p class="lead text-justify">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
+					<p class="lead text-justify">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
+					<p class="lead text-justify">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
 				</div>
 			</div>
 
@@ -147,7 +147,7 @@
 				variant: 'variant-2',
 			} %}
 		</div>
-		<div class="px-4 pt-5 mb-4">
+		<div class="px-4 pt-5 mb-4" id="ourProduct">
 			<h3 class="display-3 text-center animated text-slide-in">Beauty & Wellness Products</h3>
 			<p class="text-center h3">Elixxi<sup>®</sup> Beauty + Maxxima Nutrition - XSERIES</p>
 		</div>
@@ -177,7 +177,7 @@
 						},
 						{
 							name: 'XSERIES - AFX',
-							description: 'Formulated with the extract of organic wild Aphanizomenon Flos Aquae (AFA), AFX is a liquid form dietary supplement that boosts your immune system and supercharges your body with an abundance of nutrients for a more vibrant health and energy.',
+							description: 'Formulated with the extract of organic wild Aphanizomenon Flos Aquae (AFA), AFX is a capsule form dietary supplement that boosts your immune system and supercharges your body with an abundance of nutrients for a more vibrant health and energy.',
 							image: 'assets/img/products/AFX.png',
 							link: '#',
 						},
@@ -271,61 +271,56 @@
 
 	<section class="bg-gray-200 py-6">
 		<div class="container">
-			<div class="col-12">
-				<h3 class="display-3 text-center animated text-slide-in">STRATEGIC PARTNERS</h3>
-				<p class="text-center lead sub-title mx-auto">Our brilliant performance in managing the business has attracted many international  collaborations in order to make our products and services reach an optimal level. In MAXXIMA, we are driven to build a strong foundation  that can achieve higher success.</p>
-			</div>
-
-			<div class="carousel variant-partners swiper-container">
-				<div class="swiper-wrapper">
-					{% set partners = [
-						{
-							logo: 'assets/img/strategic-partners_logo-01.png',
-							altText: 'partners-1'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-02.png',
-							altText: 'partners-2'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-03.png',
-							altText: 'partners-3'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-04.png',
-							altText: 'partners-4'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-05.png',
-							altText: 'partners-5'
-						},
-						{
-							logo: 'assets/img/strategic-partners_logo-06.png',
-							altText: 'partners-6'
-						},
-					]%}
-					{% for partner in partners %}
-						<div class="swiper-slide">
-							{% include "@::templates/components/logo-thumbnail.twig" with {
-						logo: partner.logo,
-						altText: partner.altText,
-						variant: 'partners-thumbnail'
-					}%}
-						</div>
-					{% endfor %}
+			<div class="row">
+				<div class="col-12">
+					<h3 class="display-3 text-center animated text-slide-in">STRATEGIC PARTNERS</h3>
+					<p class="text-center lead sub-title mx-auto">Our brilliant performance in managing the business has attracted many international  collaborations in order to make our products and services reach an optimal level. In MAXXIMA, we are driven to build a strong foundation  that can achieve higher success.</p>
 				</div>
-				<div class="swiper-navigation d-md-none">
-					<div class="swiper-button-prev">
-						{% include "@::templates/components/icon.twig" with {
-                            iconName: 'chevron-left',
-                            iconSize: 's'
-                        } %}
-					</div>
-					<div class="swiper-button-next">
-						{% include "@::templates/components/icon.twig" with {
-                            iconName: 'chevron-right',
-                            iconSize: 's'
-                        } %}
+
+				<div class="col-lg-10 offset-lg-1">
+					<div class="list variant-partners">
+						{% set partners = [
+							{
+								logo: 'assets/img/strategic-partners_logo-01.png',
+								altText: 'partners-1'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-02.png',
+								altText: 'partners-2'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-03.png',
+								altText: 'partners-3'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-04.png',
+								altText: 'partners-4'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-05.png',
+								altText: 'partners-5'
+							},
+							{
+								logo: 'assets/img/strategic-partners_logo-06.png',
+								altText: 'partners-6'
+							},
+							{
+								logo: 'assets/img/partners/qurate.png',
+								altText: 'Qurate'
+							},
+							{
+								logo: 'assets/img/partners/nexus-wise.png',
+								altText: 'Nexus Wise'
+							},
+						]%}
+						{% for partner in partners %}
+							<div class="list-item">
+								{% include "@::templates/components/logo-thumbnail.twig" with {
+									logo: partner.logo,
+									altText: partner.altText
+								}%}
+							</div>
+						{% endfor %}
 					</div>
 				</div>
 			</div>
@@ -347,7 +342,7 @@
 									name: 'Harun Mohd Noor ',
 									origin: 'Kuantan, Pahang',
 									image: 'harun-noor.jpg',
-                        			quote: '“Ketiga-tiga anak saya di rumah sangat suka KIX. Memang tidak boleh disamakan dengan vitamin atau suplemen di farmasi. Mereka juga suka bermain teka-teki antara satu sama lain warna apa yang mempunyai perisa lebih sedap. Terima kasih Maxxima kerana menawarkan servis pembelian dalam talian. Kini saya tidak lagi kehabisan stok.”',
+                        			quote: '“My three little kids at home love KIX very much. Can’t say the same when I have to give them pharmacy bought supplements. Now, they even create a little game amongst themselves by guessing the delicious flavours. They became my constant reminder whenever KIX stock is getting low. Thank you Maxxima for offering the online purchase platform. Really convenient.”',
 
 								},
 								{
@@ -387,7 +382,7 @@
 		</div>
 	</section>
 
-	<section class="py-6 bg-gray-200" id="leaders">
+	<section class="py-6 bg-gray-200" id="ourTeam">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
@@ -430,7 +425,7 @@
 		</div>
 	</section>
 
-	<section class="py-6" id="ourTeam">
+	<section class="py-6">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
