@@ -554,4 +554,31 @@
 		</div>
 	</section>
 
-{% endblock %}f
+{% endblock %}
+
+{% block footer %}
+	{% set footerModel = {
+		sections: [
+			{
+				title: 'Pautan Pantas',
+				subItems: [
+					{ title: 'Laman Utama', link: '#home' },
+					{ title: 'Tentang Kami', link: '#aboutUs' },
+					{ title: 'Produk Kami', link: '#ourProduct' },
+					{ title: 'Karier', link: '#career' },
+				]
+			},
+			{
+				title: 'Kekal Berhubung',
+				subItems: [
+					{ title: 'Hubungi Kami', link: '#contactUs' }
+				]
+			}
+		],
+		socialTitle: 'Kunjungi Media Sosial Kami',
+		hotlineTitle: 'Talian Bebas Tol',
+		addressTitle: 'Alamat',
+		copyrightText: 'Hak Cipta Terpelihara Maxxima Resources (M) Sdn Bhd. 2020.<br/>*PENAFIAN: Pernyataan ini belum dinilai oleh Pentadbiran Makanan dan Ubat-ubatan. Produk ini tidak bertujuan untuk mendiagnosis, merawat, menyembuhkan atau mencegah sebarang penyakit. Pandangan dan nasihat pemakanan yang dinyatakan oleh Maxxima Nutrition bukan bertujuan sebagai nasihat perubatan. Sila dapatkan nasihat daripada penyedia  perkhidmatan kesihatan sekiranya anda mengambil ubat atau mempunyai kesan sampingan perubatan. Keputusan setiap individu mungkin berbeza.'
+	} %}
+	{% include "@::templates/components/footer.twig" with { model: footerModel } %}
+{% endblock %}
