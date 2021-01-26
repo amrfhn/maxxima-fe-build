@@ -23,12 +23,18 @@
 
 		img {
 			width: 100%;
+			max-height: 100%;
+			object-fit: contain;
 		}
 	}
 	.card-body {
 		border: none;
 		border-top: 5px solid #c1c1c1;
 		transition: all 0.3s ease;
+
+		// sup {
+		// 	font-size: .15em;
+		// }
 
 		.icon-wrapper {
 			position: relative;
