@@ -27,7 +27,7 @@
 
 	<section class="bg-gray-200 py-6" id="aboutUs">
 		<div class="px-4">
-			<div class="d-md-flex justify-content-center">
+			<div class="d-flex flex-wrap justify-content-center">
 				<h3 class="display-3 text-center animated text-slide-in">Kenapa</h3>
 				<h3 class="display-3 text-red text-center ms-3 animated text-slide-in">MAXXIMA </h3>
 				<h3 class="display-3 text-center animated text-slide-in">?</h3>
@@ -86,7 +86,7 @@
 							</div>
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
-								title: '4+	',
+								title: '4+',
 								text: 'Kehadiran Di Peringkat Asia Tenggara Yang Kukuh',
 							} %}
 							</div>
@@ -108,37 +108,36 @@
 			</div>
 
 			<div class="row d-md-none d-flex">
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '200k+',
-						text: 'Successful Business Associates',
+						text: 'Rakan Niaga Yang Berjaya',
 					} %}
 				</div>
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '100m+',
-						text: 'Total Weekly Commissions Paid',
+						text: 'Jumlah Komisen Mingguan Yang Dibayar',
 					} %}
 				</div>
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
-						title: '4+	',
-						text: 'Strong SEA Presence',
+						title: '4+',
+						text: 'Kehadiran Di Peringkat Asia Tenggara Yang Kukuh',
 					} %}
 				</div>
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '10+',
-						text: 'Quality Products',
+						text: 'Produk Berkualiti',
 					} %}
 				</div>
 
 				<div class="col">
 					{% include "@::templates/components/line-separator.twig" %}
-
-					<p class="lead">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
-					<p class="lead">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
-					<p class="lead">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
+					<p class="lead text-justify">Diasaskan oleh usahawan berpengalaman dan berjaya, MAXXIMA telah berjaya membuktikan kualiti dan prestasi syarikat yang begitu tinggi dengan merangkul pelbagai anugerah di peringkat kebangsaan dan antarabangsa di bawah industri kecantikan dan kesihatan,.</p>
+					<p class="lead text-justify">Teras misi perniagaan kami adalah untuk mengubah kehidupan. Kami berhasrat untuk membantu menambah baik taraf kehidupan rakan niaga dan juga pengguna kami dari segi kewangan dan gaya hidup. Oleh demikian, kami sentiasa meletakkan komitmen untuk mengembang dan meningkatkan prestasi perniagaan kepada masyarakat.</p>
+					<p class="lead text-justify">Dengan menimba lebih banyak pengalaman, menambahbaik inovasi saintifik, menawarkan produk gaya hidup terkini, dan meletakkan kawalan kualiti yang tinggi, MAXXIMA terus meneroka jalan baharu agar masyarakat dapat menjalani kehidupan yang lebih sihat dan berkualiti.</p>
 				</div>
 			</div>
 
@@ -454,7 +453,7 @@
 					},
 					{
 						image: 'yus',
-						name: 'Yuslaini Binti Yusof',
+						name: 'Yuslaini Yusof',
 						position: 'Ketua Perkhidmatan Pengedar',
 						email: 'yus@maxx.my',
 						description: 'Merupakan seorang yang ramah dan mudah didekati, Yus adalah orang penting dalam menjamin kualiti tinggi perkhidmatan syarikat. Beliau juga mahir dalam memimpin pasukan perkhidmatan pelanggan dan diberi kepercayaan untuk menyelesaikan masalah dengan bijak dan pantas.'
@@ -468,7 +467,7 @@
 					},
 					{
 						image: 'eddie',
-						name: 'Zamri Bin Durahman',
+						name: 'Zamri Durahman',
 						position: 'Ketua Jabatan Logistik',
 						email: 'zamri@maxx.my',
 						description: 'Mahir dalam khidmat pelanggan dan operasi gudang, Zamri mempunyai kepakaran dalam memimpin pasukannya untuk memberi tahap kepuasan pelanggan yang tinggi dan menjamin kualiti barang untuk syarikat.'
@@ -496,18 +495,22 @@
 					}
 				]
 				%}
-
-				{% for team in teams %}
-					<div class="col-md-4 col-12">
-						{% include "@::templates/components/card-v3.twig" with {
-							image: team.image,
-							name: team.name,
-							position: team.position,
-							email: team.email,
-							description: team.description
-						}%}
+				<div class="carousel variant-card3 swiper-container pb-5">
+					<div class="swiper-wrapper">
+						{% for team in teams %}
+							<div class="swiper-slide">
+								{% include "@::templates/components/card-v3.twig" with {
+									image: team.image,
+									name: team.name,
+									position: team.position,
+									email: team.email,
+									description: team.description
+								}%}
+							</div>
+						{% endfor %}
 					</div>
-				{% endfor %}
+					<div class="swiper-pagination"></div>
+				</div>
 			</div>
 		</div>
 	</section>
@@ -557,31 +560,4 @@
 		</div>
 	</section>
 
-{% endblock %}
-
-{% block footer %}
-	{% set footerModel = {
-		sections: [
-			{
-				title: 'Pautan Pantas',
-				subItems: [
-					{ title: 'Laman Utama', link: '#home' },
-					{ title: 'Tentang Kami', link: '#aboutUs' },
-					{ title: 'Produk Kami', link: '#ourProduct' },
-					{ title: 'Karier', link: '#career' },
-				]
-			},
-			{
-				title: 'Kekal Berhubung',
-				subItems: [
-					{ title: 'Hubungi Kami', link: '#contactUs' }
-				]
-			}
-		],
-		socialTitle: 'Kunjungi Media Sosial Kami',
-		hotlineTitle: 'Talian Bebas Tol',
-		addressTitle: 'Alamat',
-		copyrightText: 'Hak Cipta Terpelihara Maxxima Resources (M) Sdn Bhd. 2020.<br/>*PENAFIAN: Pernyataan ini belum dinilai oleh Pentadbiran Makanan dan Ubat-ubatan. Produk ini tidak bertujuan untuk mendiagnosis, merawat, menyembuhkan atau mencegah sebarang penyakit. Pandangan dan nasihat pemakanan yang dinyatakan oleh Maxxima Nutrition bukan bertujuan sebagai nasihat perubatan. Sila dapatkan nasihat daripada penyedia  perkhidmatan kesihatan sekiranya anda mengambil ubat atau mempunyai kesan sampingan perubatan. Keputusan setiap individu mungkin berbeza.'
-	} %}
-	{% include "@::templates/components/footer.twig" with { model: footerModel } %}
-{% endblock %}
+{% endblock %}f
