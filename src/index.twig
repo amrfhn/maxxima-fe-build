@@ -559,3 +559,31 @@
 	</section>
 
 {% endblock %}
+
+
+{% block footer %}
+	{% set footerModel = {
+		sections: [
+			{
+				title: 'Quicklinks',
+				subItems: [
+					{ title: 'Home', link: '#home' },
+					{ title: 'About Us', link: '#aboutUs' },
+					{ title: 'Our Product', link: '#ourProduct' },
+					{ title: 'Career', link: '#career' },
+				]
+			},
+			{
+				title: 'Connect',
+				subItems: [
+					{ title: 'Contact Us', link: '#contactUs' }
+				]
+			}
+		],
+		socialTitle: 'Check Our Social',
+		hotlineTitle: 'Hotline',
+		addressTitle: 'Address',
+		copyrightText: 'Copyright Maxxima Resources (M) Sdn Bhd. 2020. All Rights Reserved<br/>*DISCLAIMER: These statements have not been evaluated by the Food and Drug Administration. This product is not intended to diagnose, treat, cure, or prevent any diease. The views and nutrinational advice expressed by Maxxima Nutrition are not intended for the purpose of providing medical advice. Please always consult your health care provider if you are taking any medications or have any medical condition, individual results may mary.'
+	} %}
+	{% include "@::templates/components/footer.twig" with { model: footerModel } %}
+{% endblock %}
