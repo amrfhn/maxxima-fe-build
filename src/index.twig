@@ -27,7 +27,7 @@
 
 	<section class="bg-gray-200 py-6" id="aboutUs">
 		<div class="px-4">
-			<div class="d-md-flex justify-content-center">
+			<div class="d-flex flex-wrap justify-content-center">
 				<h3 class="display-3 text-center animated text-slide-in">WHY CHOOSE</h3>
 				<h3 class="display-3 text-red text-center ms-3 animated text-slide-in">MAXXIMA</h3>
 			</div>
@@ -86,7 +86,7 @@
 							</div>
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
-								title: '4+	',
+								title: '4+',
 								text: 'Strong SEA Presence',
 							} %}
 							</div>
@@ -108,25 +108,25 @@
 			</div>
 
 			<div class="row d-md-none d-flex">
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '200k+',
 						text: 'Successful Business Associates',
 					} %}
 				</div>
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '100m+',
 						text: 'Total Weekly Commissions Paid',
 					} %}
 				</div>
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '4+	',
 						text: 'Strong SEA Presence',
 					} %}
 				</div>
-				<div class="col-12">
+				<div class="col-6">
 					{% include "@::templates/components/tiles-v1.twig" with {
 						title: '10+',
 						text: 'Quality Products',
@@ -375,7 +375,7 @@
 								</div>
 							{% endfor %}
 						</div>
-						<div class="swiper-pagination swiper-pagination-bullets"></div>
+						<div class="swiper-pagination"></div>
 					</div>
 				</div>
 			</div>
@@ -439,7 +439,7 @@
 						name: 'Shafigh Suresh Bhaskaran',
 						position: 'Group Accountant',
 						email: 'suresh@maxx.my',
-						description: 'A melticulour and experience senior with a strong history in auditing, financing and accounting. Suresh has led the teams in renowned companies of various industries.'
+						description: 'A meticulous and experience senior with a strong history in auditing, financing and accounting. Suresh has led the teams in renowned companies of various industries.'
 					},
 					{
 						image: 'erin',
@@ -450,21 +450,21 @@
 					},
 					{
 						image: 'yus',
-						name: 'Yuslaini Binti Yusof',
+						name: 'Yuslaini Yusof',
 						position: 'Head of Distributor Services',
 						email: 'yus@maxx.my',
-						description: 'Gracious and adaptable, Yus is the gatekeeper of the quality of our services. She is the positive energy that leads our customer service teams and is always trusted to solve problems with tact and swiftness.'
+						description: 'Gracious and adaptable, Yus is the gatekeeper of the quality of our services. She is the positive energy that leads our customer service team and is always trusted to solve problems with tact and swiftness.'
 					},
 					{
 						image: 'nelly',
 						name: 'Nelly Nazir',
 						position: 'Head of Marketing Communications',
 						email: 'nelly@maxx.my',
-						description: 'Striking a balance between strategy and creativity, Nelly is an expert in both traditional and digital advertising. In her 15 years of experience, she has managed local and even regional clients.'
+						description: 'Striking a balance between strategy and creativity, Nelly is an expert in both traditional and digital advertising. In her 15 years of experience, she has managed local and even international portfolios.'
 					},
 					{
 						image: 'eddie',
-						name: 'Zamri Bin Durahman',
+						name: 'Zamri Durahman',
 						position: 'Head of Logistic Department',
 						email: 'zamri@maxx.my',
 						description: 'Skilled in customer service and warehouse operations, Zamri leads his team to achieve high levels of customer satisfaction and assuring the quality of goods for the company.'
@@ -492,18 +492,22 @@
 					}
 				]
 				%}
-
-				{% for team in teams %}
-					<div class="col-md-4 col-12">
-						{% include "@::templates/components/card-v3.twig" with {
-							image: team.image,
-							name: team.name,
-							position: team.position,
-							email: team.email,
-							description: team.description
-						}%}
+				<div class="carousel variant-card3 swiper-container pb-5">
+					<div class="swiper-wrapper">
+						{% for team in teams %}
+							<div class="swiper-slide">
+								{% include "@::templates/components/card-v3.twig" with {
+									image: team.image,
+									name: team.name,
+									position: team.position,
+									email: team.email,
+									description: team.description
+								}%}
+							</div>
+						{% endfor %}
 					</div>
-				{% endfor %}
+					<div class="swiper-pagination"></div>
+				</div>
 			</div>
 		</div>
 	</section>

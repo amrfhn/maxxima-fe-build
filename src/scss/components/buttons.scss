@@ -17,6 +17,7 @@
 		max-height: 48px;
 		padding: 12px 36px;
 		border-color: #fff;
+		border-radius: 2rem;
 
 		&:focus {
 			color: $red;
@@ -34,11 +35,16 @@
 
 		&:hover {
 			color: $red;
-			background-color: #fff;
+			background-color: transparent;
 		}
 
 		&:focus {
 			box-shadow: none;
+		}
+
+		&.variant-large {
+			padding: 12px 36px;
+			font-size: 18px;
 		}
 	}
 }
