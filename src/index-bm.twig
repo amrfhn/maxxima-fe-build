@@ -1,5 +1,22 @@
 {% extends "@::templates/_layout.twig" %}
 
+{% block navigation %}
+	{% set navModel = {
+		links: [
+			{ title: 'Laman Utama', link: '#home' },
+			{ title: 'Tentang Kami', link: '#aboutUs' },
+			{ title: 'Produk Kami', link: '#ourProduct' },
+			{ title: 'Barisan Kepimpinan', link: '#ourTeam' },
+			{ title: 'Karier', link: '#career' },
+		],
+		contactUs: {
+			title: 'Hubungi Kami',
+			link: '#contactUs'
+		}
+	} %}
+	{% include "@::templates/components/navbar.twig" with { model: navModel } %}
+{% endblock %}
+
 {% block main %}
 
 	<section id="home" class="bg-gray-200">

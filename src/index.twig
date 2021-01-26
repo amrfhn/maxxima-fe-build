@@ -1,5 +1,22 @@
 {% extends "@::templates/_layout.twig" %}
 
+
+{% block navigation %}
+	{% set navModel = {
+		links: [
+			{ title: 'Home', link: '#home' },
+			{ title: 'About Us', link: '#aboutUs' },
+			{ title: 'Our Product', link: '#ourProduct' },
+			{ title: 'Our Team', link: '#ourTeam' },
+			{ title: 'Career', link: '#career' },
+		],
+		contactUs: {
+			title: 'Contact Us',
+			link: '#contactUs'
+		}
+	} %}
+	{% include "@::templates/components/navbar.twig" with { model: navModel } %}
+{% endblock %}
 {% block main %}
 
 	<section id="home" class="bg-gray-200">
