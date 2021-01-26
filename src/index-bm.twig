@@ -39,21 +39,21 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
-                    icon: 'quality',
+                    icon: 'high-quality',
                     cardTitle: 'Produk Berkualiti Tinggi',
                     cardText: 'Semua produk Maxxima disokong oleh kajian klinikal untuk memastikan keselamatan dan keberkesanan kepada penggunanya.'
                 } %}
 					</div>
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
-                    icon: 'compensation',
+                    icon: 'consistent-compensation',
                     cardTitle: 'Pelan Kompensasi',
-                    cardText: 'Sejak ditubuhkan pada 2013, MAXXIMA telah membayar komisen lebih daripada RM100 juta kepada rakan niaga mereka setiap minggu. Dengan model perniagaan dan perancangan yang kukuh, MAXXIMA telah mengubah rata-rata kehidupan masyarakat dari segi kewangan.'
+                    cardText: 'Sejak ditubuhkan pada 2012, MAXXIMA telah membayar komisen lebih daripada RM100 juta kepada rakan niaga mereka setiap minggu. Dengan model perniagaan dan perancangan yang kukuh, MAXXIMA telah mengubah rata-rata kehidupan masyarakat dari segi kewangan.'
                 } %}
 					</div>
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
-                    icon: 'support',
+                    icon: 'strong-support-system',
                     cardTitle: 'Sistem Sokongan Yang Kuat',
                     cardText: 'MAXXIMA telah menetapkan penanda aras yang tinggi di dalam industri kecantikan dan kesihatan serta telah menjadi ‘Talk Of The Town’ kerana strategi penjenamaan mereka, latihan dan sistem sokongan yang diberikan telah membantu rakan niaga mereka membina sebuah empayar perniagaan yang kukuh.'
                 } %}
@@ -554,4 +554,31 @@
 		</div>
 	</section>
 
-{% endblock %}f
+{% endblock %}
+
+{% block footer %}
+	{% set footerModel = {
+		sections: [
+			{
+				title: 'Pautan Pantas',
+				subItems: [
+					{ title: 'Pautan Pantas', link: '#home' },
+					{ title: 'Tentang Kami', link: '#aboutUs' },
+					{ title: 'Produk Kami', link: '#ourProduct' },
+					{ title: 'Karier', link: '#career' },
+				]
+			},
+			{
+				title: 'Kekal Berhubung',
+				subItems: [
+					{ title: 'Hubungi Kami', link: '#contactUs' }
+				]
+			}
+		],
+		socialTitle: 'Kunjungi Media Sosial Kami',
+		hotlineTitle: 'Talian Bebas Tol',
+		addressTitle: 'Alamat',
+		copyrightText: 'Hak Cipta Terpelihara Maxxima Resources (M) Sdn Bhd. 2020.<br/>*PENAFIAN: Pernyataan ini belum dinilai oleh Pentadbiran Makanan dan Ubat-ubatan. Produk ini tidak bertujuan untuk mendiagnosis, merawat, menyembuhkan atau mencegah sebarang penyakit. Pandangan dan nasihat pemakanan yang dinyatakan oleh Maxxima Nutrition bukan bertujuan sebagai nasihat perubatan. Sila dapatkan nasihat daripada penyedia  perkhidmatan kesihatan sekiranya anda mengambil ubat atau mempunyai kesan sampingan perubatan. Keputusan setiap individu mungkin berbeza.'
+	} %}
+	{% include "@::templates/components/footer.twig" with { model: footerModel } %}
+{% endblock %}
