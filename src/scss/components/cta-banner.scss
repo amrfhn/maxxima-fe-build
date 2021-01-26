@@ -1,7 +1,13 @@
 .cta-banner {
-	.banner-text, .banner-cta {
+	.banner-text,
+	.banner-cta {
 		@include media-breakpoint-down(md) {
-            text-align: center;
+			text-align: center;
+		}
+	}
+	.banner-text {
+		@include media-breakpoint-up(md) {
+			max-width: 730px;
 		}
 	}
 }

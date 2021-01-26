@@ -1,10 +1,27 @@
 {% extends "@::templates/_layout.twig" %}
 
+{% block navigation %}
+	{% set navModel = {
+		links: [
+			{ title: 'Laman Utama', link: '#home' },
+			{ title: 'Tentang Kami', link: '#aboutUs' },
+			{ title: 'Produk Kami', link: '#ourProduct' },
+			{ title: 'Barisan Kepimpinan', link: '#ourTeam' },
+			{ title: 'Karier', link: '#career' },
+		],
+		contactUs: {
+			title: 'Hubungi Kami',
+			link: '#contactUs'
+		}
+	} %}
+	{% include "@::templates/components/navbar.twig" with { model: navModel } %}
+{% endblock %}
+
 {% block main %}
 
 	<section id="home" class="bg-gray-200">
 		{% include "@::templates/components/video-banner.twig" with {
-			description: 'MAXXIMA is an award-winning beauty and wellness company that is driven by the desire to transform lives and ensure that our business has a purpose beyond profit.'
+			description: 'MAXXIMA merupakan sebuah syarikat yang mempunyai misi dan visi yang meletakkan perniagaan mereka mempunyai arah tuju melebihi daripada nilai keuntungan semata-mata.'
 		} %}
 	</section>
 
@@ -22,22 +39,22 @@
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
                     icon: 'quality',
-                    cardTitle: 'High Quality Products',
-                    cardText: 'All products under MAXXIMA are developed together with numerous R&D teams around the globe and backed by clinically studies to ensure maximum levels of safety and effectiveness.'
+                    cardTitle: 'Produk Berkualiti Tinggi',
+                    cardText: 'Semua produk Maxxima disokong oleh kajian klinikal untuk memastikan keselamatan dan keberkesanan kepada penggunanya.'
                 } %}
 					</div>
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
                     icon: 'compensation',
-                    cardTitle: 'Consistent Compensation',
-                    cardText: 'Since MAXXIMA’s establishment in 2012, we have paid our business associates on a weekly basis, with the commissions totalling up to over RM100,000 million, to date. Our sound business model and compensation plan has positively transformed the lives of many financially.'
+                    cardTitle: 'Pelan Kompensasi',
+                    cardText: 'Sejak ditubuhkan pada 2013, MAXXIMA telah membayar komisen lebih daripada RM100 juta kepada rakan niaga mereka setiap minggu. Dengan model perniagaan dan perancangan yang kukuh, MAXXIMA telah mengubah rata-rata kehidupan masyarakat dari segi kewangan.'
                 } %}
 					</div>
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
                     icon: 'support',
-                    cardTitle: 'Strong Support System',
-                    cardText: 'MAXXIMA is known for pushing the benchmarks of beauty and wellness, making us the talk of the town in the industry. Our efficient training and support system have helped our business associates build sustainable businesses.'
+                    cardTitle: 'Sistem Sokongan Yang Kuat',
+                    cardText: 'MAXXIMA telah menetapkan penanda aras yang tinggi di dalam industri kecantikan dan kesihatan serta telah menjadi ‘Talk Of The Town’ kerana strategi penjenamaan mereka, latihan dan sistem sokongan yang diberikan telah membantu rakan niaga mereka membina sebuah empayar perniagaan yang kukuh.'
                 } %}
 					</div>
 				</div>
@@ -51,32 +68,31 @@
 			<div class="two-tiles-container row row-cols-1 row-cols-md-2 g-4">
 				<div class="col">
 					<div>
-						<h3 class="display-3 mb-md-4 animated text-slide-in">YEARS OF ECOMMERCE EXPERIENCE IN</h3>
-						<h4 class="display-4 mb-5">Malaysia, Indonesia,
-							<br/>Singapore, & Brunei</h4>
+						<h3 class="display-3 mb-md-4 animated text-slide-in">TAHUN PENGALAMAN DALAM INDUSTRI E-DAGANG</h3>
+						<h4 class="display-4 mb-5">Malaysia, Indonesia, <br/>Singapura, & Brunei.</h4>
 						<div class="row d-none d-md-flex">
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
 								title: '200k+',
-								text: 'Successful Business Associates',
+								text: 'Rakan Niaga Yang Berjaya',
 							} %}
 							</div>
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
-								title: '100,000m+',
-								text: 'Total Weekly Commissions Paid',
+								title: '100m+',
+								text: 'Jumlah Komisen Mingguan Yang Dibayar',
 							} %}
 							</div>
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
 								title: '4+	',
-								text: 'Strong SEA Presence',
+								text: 'Kehadiran Di Peringkat Asia Tenggara Yang Kukuh',
 							} %}
 							</div>
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
 								title: '10+',
-								text: 'Quality Products',
+								text: 'Produk Berkualiti',
 							} %}
 							</div>
 						</div>
@@ -84,9 +100,9 @@
 				</div>
 				<div class="col d-md-block d-none">
 					{% include "@::templates/components/line-separator.twig" %}
-					<p class="lead">Founded by experienced and accomplished entrepreneurs, MAXXIMA has won numerous awards internationally in the beauty and wellness industry, setting a proven track record of achievements.</p>
-					<p class="lead">At the core of our business mission is to transform lives. We aim to improve the financial as well as personal wellbeing of our business associates as well as consumers. That’s why we are constantly developing and enhancing our business with people’s ever-evolving needs in mind.</p>
-					<p class="lead">Drawing more experiences, charting excellent scientific innovation, offering up-to date lifestyle products, streamlining solid values and standardising high quality control, MAXXIMA continues to pave new pathways for people to lead healthier and wealthier lives - and the numbers are increasing every day.</p>
+					<p class="lead">Diasaskan oleh usahawan berpengalaman dan berjaya, MAXXIMA telah berjaya membuktikan kualiti dan prestasi syarikat yang begitu tinggi dengan merangkul pelbagai anugerah di peringkat kebangsaan dan antarabangsa di bawah industri kecantikan dan kesihatan,.</p>
+					<p class="lead">Teras misi perniagaan kami adalah untuk mengubah kehidupan. Kami berhasrat untuk membantu menambah baik taraf kehidupan rakan niaga dan juga pengguna kami dari segi kewangan dan gaya hidup. Oleh demikian, kami sentiasa meletakkan komitmen untuk mengembang dan meningkatkan prestasi perniagaan kepada masyarakat.</p>
+					<p class="lead">Dengan menimba lebih banyak pengalaman, menambahbaik inovasi saintifik, menawarkan produk gaya hidup terkini, dan meletakkan kawalan kualiti yang tinggi, MAXXIMA terus meneroka jalan baharu agar masyarakat dapat menjalani kehidupan yang lebih sihat dan berkualiti.</p>
 				</div>
 			</div>
 
@@ -131,8 +147,8 @@
 			} %}
 		</div>
 		<div class="px-4 pt-5 mb-4">
-			<h3 class="display-3 text-center animated text-slide-in">Beauty & Wellness Products</h3>
-			<p class="text-center h3">Elixxi<sup>®</sup> Beauty + Maxxima Nutrition - XSERIES</p>
+			<h3 class="display-3 text-center animated text-slide-in">Produk Kecantikan & Kesihatan</h3>
+			<p class="text-center h3">Elixxi<sup>®</sup> Beauty + Maxxima suplemen Kesihatan XSERIES</p>
 		</div>
 
 
@@ -142,36 +158,37 @@
 					{% set products = [
 						{
 							name: 'Elixxi<sup>®</sup> Beauty Drink',
-							description: 'Clinically proven, award-winning and formulated with the patent-pending solution, SkinAx<sup>2TM</sup>, Elixxi<sup>®</sup> Beauty Drink brings back the youthful glow in your skin while nourishing your hair and nails, with the best of science and nature.',
+							description: 'Elixxi<sup>®</sup> Beauty Drink adalah minuman kecantikan yang mampu mengembalikan semula keremajaan kulit anda menerusi keajaiban sains serta keunikan bahan yang berasaskan semula jadi. Elixxi<sup>®</sup> Beauty Drink juga dilengkapi dengan formula yang dipatenkan iaitu SkinAx<sup>²™</sup> serta terbukti secara klinikal boleh membantu menyegarkan kulit, menyihatkan rambut dan menguatkan kuku anda.',
+							image: 'assets/img/products/Product-Elixxi-Beauty.png',
 							link: '#',
 						},
 						{
 							name: 'Elixxi<sup>®</sup> Lipo Facial Masks',
-							description: 'Infused with precious pure flower extracts and enhanced with LipoButy<sup>™</sup> Nanotechnology, Elixxi<sup>®</sup> Lipo Facial Masks is able to nourish the skin with a deeper and more instant penetration.',
+							description: 'Serlahkan kecantikan kulit anda dengan Elixxi<sup>®</sup> Lipo Facial Mask yang dipertingkatkan dengan Nanoteknologi LipoButy<sup>™</sup> untuk memberi kesan yang lebih mendalam dan pantas. Elixxi<sup>®</sup> Lipo Facial Mask juga diperkaya dengan ekstrak bunga asli untuk kesan yang lebih efektif.',
 							image: 'assets/img/products/Product-Elixxi-Lipo-Mask.png',
 							link: '#',
 						},
 						{
 							name: 'XSERIES - CMX',
-							description: 'Formulated with a patent-pending blend of active ingredients known as ImmuMaxx<sup>™</sup>, CMX is a liquid form daily supplement that boosts your energy level and gives your body and a large amount of nutrition to stay active and healthy.',
+							description: 'CMX adalah sejenis suplemen cecair yang diformulasikan dengan bahan aktif yang dipatenkan sebagai ImmuMaxx<sup>™</sup>. Bahan campuran aktif ini mampu memberi sejumlah besar nutrisi yang berkhasiat agar tubuh anda kekal aktif dan sihat. Sesuai untuk individu yang gemar melibatkan diri dalam aktiviti bersukan kerana ia mampu membekalkan tenaga kepada tubuh anda.',
 							image: 'assets/img/products/CMX.png',
 							link: '#',
 						},
 						{
 							name: 'XSERIES - AFX',
-							description: 'Formulated with the extract of organic wild Aphanizomenon Flos Aquae (AFA), AFX is a liquid form dietary supplement that boosts your immune system and supercharges your body with an abundance of nutrients for a more vibrant health and energy.',
+							description: 'AFX adalah sejenis makanan tambahan yang  diformulasikan dengan ekstrak Aphanizomenon flos Aquae (AFA). Bahan ini juga kaya dengan mineral semula jadi, klorofil, antioksidan dan pelbagai jenis vitamin untuk menguatkan sistem imunisasi tubuh anda.',
 							image: 'assets/img/products/AFX.png',
 							link: '#',
 						},
 						{
 							name: 'XSERIES - BRX',
-							description: 'Clinically proven as the best flavonoid profile to support focus and learning capabilities, BRX is a liquid form food supplement that contains a patent-pending active ingredient known as Memophenol<sup>™</sup>, suitable for anyone who wishes to improve or maintain a healthy memory.',
+							description: 'Terbukti secara klinikal sebagai flavonoid terbaik yang boleh menyokong keupayaan untuk fokus dan pembelajaran. BRX adalah suplemen pemakanan berbentuk cecair dan dilengkapi dengan bahan aktif yang dipatenkan sebagai Memophenol<sup>™</sup>. Ia sesuai diambil bagi individu yang mahu meningkatkan atau menjaga kesihatan minda.',
 							image: 'assets/img/products/BRX.png',
 							link: '#',
 						},
 						{
 							name: 'XSERIES - KIX',
-							description: 'Formulated with the patented active ingredients of Wellmune<sup>®</sup> and DHA, KIX is safe, natural and delicious children’s gummy vitamin that supports the body’s natural defences as well as growth and functional development of the child’s brain.',
+							description: 'Diformulasikan dengan bahan aktif yang dipatenkan sebagai Wellmune<sup>®</sup> dan DHA, KIX adalah sejenis vitamin yang selamat dimakan oleh kanak-kanak dan bagus untuk menyokong sistem pertahanan semula jadi tubuh dan perkembangan otak mereka.',
 							image: 'assets/img/products/KIX.png',
 							link: '#',
 						},
@@ -197,8 +214,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="display-3 text-center animated text-slide-in">AWARDS</h3>
-					<p class="text-center lead sub-title mx-auto">Our efforts and hard work in building the business has brought about significant successes, including recognitions and numerous accolades. Like an upward spiral, the journey in pursuit of greatness has no end. Since 2013, our achievements have been shaped by the strength of the foundations we have set. This is what Maxxima is all about - always raising the bars of excellence.</p>
+					<h3 class="display-3 text-center animated text-slide-in">ANUGERAH</h3>
+					<p class="text-center lead sub-title mx-auto">Usaha dan kerja keras kami dalam membina perniagaan telah membawa kejayaan besar, termasuk pengiktirafan dan penghargaan di peringkat antarabangsa. Sebagai sebuah syarikat yang mempunyai cita-cita yang tinggi, MAXXIMA akan terus memacu kehadapan untuk meletakkan penanda aras yang lebih tinggi dalam industri kecantikan dan kesihatan.</p>
 				</div>
 				<div class="col-lg-8 offset-lg-2">
 					<div class="list variant-logos">
@@ -253,8 +270,8 @@
 	<section class="bg-gray-200 py-6">
 		<div class="container">
 			<div class="col-12">
-				<h3 class="display-3 text-center animated text-slide-in">STRATEGIC PARTNERS</h3>
-				<p class="text-center lead sub-title mx-auto">Our brilliant performance in managing the business has attracted many international collaborations in order to make our products and services reach an optimal level. In MAXXIMA, we are driven to build a strong foundation that can achieve higher success.</p>
+				<h3 class="display-3 text-center animated text-slide-in">RAKAN STRATEGIK</h3>
+				<p class="text-center lead sub-title mx-auto">Prestasi cemerlang kami dalam mengurus perniagaan telah menarik banyak minat di peringkat global untuk menjalinkan kerjasama dalam misi menjadikan produk dan servis MAXXIMA berada di tahap optimum. Kami didorong untuk membina asas yang teguh demi mencapai kecemerlangan yang lebih tinggi.</p>
 			</div>
 
 			<div class="carousel variant-partners swiper-container">
@@ -318,7 +335,7 @@
 			<div class="row d-md-flex justify-content-center">
 				<div class="col-12 col-md-4 mx-auto px-0 px-md-3">
 					<img class="font-img mb-3" src="assets/img/double-quote.png" />
-					<h3 class="display-3 mb-md-4 ms-3 animated text-slide-in">TESTIMONIALS</h3>
+					<h3 class="display-3 mb-md-4 ms-3 animated text-slide-in">TESTIMONI</h3>
 				</div>
 				<div class="col-12 col-md-6 mt-md-5 mt-3">
 					<div class="carousel variant-testimonials swiper-container pb-5">
@@ -371,8 +388,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="display-3 mb-md-4 ms-3 text-red text-center animated text-slide-in">OUR LEADERS</h3>
-					<p class="lead text-center">With over 50 years of combined entrepreneurial successes and experiences, our team of leaders know what it takes to create lasting and thriving businesses. Every one of MAXXIMA’s leader stands out from the crowd, not only for their accomplishments, but for their integrity and responsible management as well. At MAXXIMA you will be immediately surrounded with the right people who know what it takes to truly propel you towards your life goals.</p>
+					<h3 class="display-3 mb-md-4 ms-3 text-red text-center animated text-slide-in">PENGASAS MAXXIMA</h3>
+					<p class="lead text-center">Dengan mempunyai lebih 50 tahun pengalaman secara total dalam dunia keusahawanan, ia menjadikan mereka lebih jelas dengan hala tuju MAXXIMA bagi memastikan perniagaan yang lebih mampan. Barisan kepimpinan kami bukan sahaja menonjol kerana rekod pencapaian yang dilakar, tetapi integriti dan cara pengurusan yang dipamerkan oleh mereka. Di MAXXIMA anda hanya akan dikelilingi oleh individu-individu yang komited untuk berjaya.</p>
 				</div>
 				<div class="d-md-flex justify-content-center">
 					{% 
@@ -414,8 +431,8 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="display-3 mb-md-4 ms-3 text-center animated text-slide-in">MEET OUR TEAM</h3>
-					<p class="lead text-center">Get to know the masterminds behind our business and the experiences they bring.</p>
+					<h3 class="display-3 mb-md-4 ms-3 text-center animated text-slide-in">KENALI BARISAN KEPIMPINAN KAMI</h3>
+					<p class="lead text-center">Kenali dalang di sebalik perniagaan kami dan pengalaman yang mereka bawa.</p>
 				</div>
 
 				{% set teams  = [
@@ -494,7 +511,10 @@
 	</section>
 
 	<section id="career">
-		{% include "@::templates/components/cta-banner.twig" %}
+		{% include "@::templates/components/cta-banner.twig" with {
+			subTitle: 'Berminat untuk sertai Rakan Niaga MAXXIMA?',
+			title: 'RASAI PENGALAMAN PERNIAGAAN TANPA HAD BERSAMA KAMI!'
+		} %}
 	</section>
 
 	<section class="py-5 bg-gray-200">
@@ -502,8 +522,8 @@
 			<div class="row">
 				<div class="maxxima-foundation position-relative">
 					<div class="col-md-8 col-12 maxxima-content pt-6 pt-md-5">
-						<h3 class="display-3 animated text-slide-in">MAXXIMA FOUNDATION</h3>
-						<p class="lead">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
+						<h3 class="display-3 animated text-slide-in">MAXXCARE FOUNDATION</h3>
+						<p class="lead">Setiap perniagaan yang berjaya hanya akan jadi lebih bermakna sekiranya mereka mempunyai hasrat untuk memberi semula kepada kesejahteraan masyarakat. MAXXCARE Foundation dibentuk dalam MAXXIMA untuk memastikan usaha membantu komuniti di dalam negara dan juga di peringkat global.</p>
 					</div>
 					<div class="img-wrapper-1">
 						<img src="assets/img/foundation-1.png" alt="Image of Maxxima foundation" />
@@ -520,8 +540,15 @@
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
-					<h3 class="display-3 mb-md-4 ms-3 text-center animated text-slide-in">CONTACT US</h3>
-					{% include "@::templates/components/form.twig" %}
+					<h3 class="display-3 mb-md-4 ms-3 text-center animated text-slide-in">HUBUNGI KAMI</h3>
+					{% include "@::templates/components/form.twig" with {
+						name: 'NAMA ANDA',
+						emailAddress: 'ALAMAT EMAIL',
+						mobileNumber: 'NOMBOR TELEFON',
+						subject: 'SUBJEK',
+						message: 'NYATAKAN MESEJ ANDA',
+						ctaLabel: 'Hantar Mesej'
+					}%}
 				</div>
 			</div>
 		</div>

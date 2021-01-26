@@ -1,5 +1,22 @@
 {% extends "@::templates/_layout.twig" %}
 
+
+{% block navigation %}
+	{% set navModel = {
+		links: [
+			{ title: 'Home', link: '#home' },
+			{ title: 'About Us', link: '#aboutUs' },
+			{ title: 'Our Product', link: '#ourProduct' },
+			{ title: 'Our Team', link: '#ourTeam' },
+			{ title: 'Career', link: '#career' },
+		],
+		contactUs: {
+			title: 'Contact Us',
+			link: '#contactUs'
+		}
+	} %}
+	{% include "@::templates/components/navbar.twig" with { model: navModel } %}
+{% endblock %}
 {% block main %}
 
 	<section id="home" class="bg-gray-200">
@@ -21,21 +38,21 @@
 				<div class="swiper-wrapper">
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
-                    icon: 'quality',
+                    icon: 'high-quality',
                     cardTitle: 'High Quality Products',
                     cardText: 'All products under MAXXIMA are developed together with numerous R&D teams around the globe and backed by clinically studies to ensure maximum levels of safety and effectiveness.'
                 } %}
 					</div>
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
-                    icon: 'compensation',
+                    icon: 'consistent-compensation',
                     cardTitle: 'Consistent Compensation',
                     cardText: 'Since MAXXIMA’s establishment in 2012, we have paid our business associates on a weekly basis, with the commissions totalling up to over RM100,000 million, to date. Our sound business model and compensation plan has positively transformed the lives of many financially.'
                 } %}
 					</div>
 					<div class="swiper-slide">
 						{% include "@::templates/components/card-v1.twig" with {
-                    icon: 'support',
+                    icon: 'strong-support-system',
                     cardTitle: 'Strong Support System',
                     cardText: 'MAXXIMA is known for pushing the benchmarks of beauty and wellness, making us the talk of the town in the industry. Our efficient training and support system have helped our business associates build sustainable businesses.'
                 } %}
@@ -143,6 +160,7 @@
 						{
 							name: 'Elixxi<sup>®</sup> Beauty Drink',
 							description: 'Clinically proven, award-winning and formulated with the patent-pending solution, SkinAx<sup>2TM</sup>, Elixxi<sup>®</sup> Beauty Drink brings back the youthful glow in your skin while nourishing your hair and nails, with the best of science and nature.',
+							image: 'assets/img/products/Product-Elixxi-Beauty.png',
 							link: '#',
 						},
 						{
@@ -495,7 +513,10 @@
 	</section>
 
 	<section id="career">
-		{% include "@::templates/components/cta-banner.twig" %}
+		{% include "@::templates/components/cta-banner.twig" with {
+			subTitle: 'Want to become a MAXXIMA Business Associate?',
+			title: 'EXPLORE LIMITLESS BUSINESS WITH US'
+		} %}
 	</section>
 
 	<section class="py-5 bg-gray-200">
@@ -503,7 +524,7 @@
 			<div class="row">
 				<div class="maxxima-foundation position-relative">
 					<div class="col-md-8 col-12 maxxima-content pt-6 pt-md-5">
-						<h3 class="display-3 animated text-slide-in">MAXXIMA FOUNDATION</h3>
+						<h3 class="display-3 animated text-slide-in">MAXXCARE FOUNDATION</h3>
 						<p class="lead">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
 					</div>
 					<div class="img-wrapper-1">
@@ -522,7 +543,14 @@
 			<div class="row">
 				<div class="col-12">
 					<h3 class="display-3 mb-md-4 ms-3 text-center animated text-slide-in">CONTACT US</h3>
-					{% include "@::templates/components/form.twig" %}
+					{% include "@::templates/components/form.twig" with {
+						name: 'YOUR NAME',
+						emailAddress: 'EMAIL ADDRESS',
+						mobileNumber: 'YOUR MOBILE NO.',
+						subject: 'SUBJECT',
+						message: 'TYPE YOUR MESSAGE HERE',
+						ctaLabel: 'Send Message'
+					}%}
 				</div>
 			</div>
 		</div>
