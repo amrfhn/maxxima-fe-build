@@ -63,7 +63,7 @@
 							</div>
 							<div class="col-md-6">
 								{% include "@::templates/components/tiles-v1.twig" with {
-								title: '100,000m+',
+								title: '100m+',
 								text: 'Total Weekly Commissions Paid',
 							} %}
 							</div>
@@ -333,10 +333,9 @@
 								},
 								{
 									name: 'Harun Mohd Noor ',
-									origin: 'Kota Kinabalu, Sabah',
+									origin: 'Kuantan, Pahang',
 									image: 'harun-noor.jpg',
                         			quote: '“My three little kids at home love KIX very much. Can’t say the same when I have to give them pharmacy bought supplements. Now, they even create a little game amongst themselves by guessing the delicious flavours. They became my constant reminder whenever KIX stock is getting low. Thank you Maxxima for offering the online purchase platform. Really convenient.”',
-
 								},
 								{
 									name: 'Siti Rahmah Leonardo',
@@ -496,7 +495,10 @@
 	</section>
 
 	<section id="career">
-		{% include "@::templates/components/cta-banner.twig" %}
+		{% include "@::templates/components/cta-banner.twig" with {
+			subTitle: 'Want to become a MAXXIMA Business Associate?',
+			title: 'EXPLORE LIMITLESS BUSINESS WITH US'
+		} %}
 	</section>
 
 	<section class="py-5 bg-gray-200">
@@ -504,7 +506,7 @@
 			<div class="row">
 				<div class="maxxima-foundation position-relative">
 					<div class="col-md-8 col-12 maxxima-content pt-6 pt-md-5">
-						<h3 class="display-3 animated text-slide-in">MAXXIMA FOUNDATION</h3>
+						<h3 class="display-3 animated text-slide-in">MAXXCARE FOUNDATION</h3>
 						<p class="lead">Every successful business is only as valuable as their contribution to the wellbeing of society. After all, it is people that drive  businesses. As a company with a purpose beyond profit, our MaxxCare Foundation was formed within MAXXMA to ensure constant efforts to supporting communities, both locally and globally.</p>
 					</div>
 					<div class="img-wrapper-1">
@@ -523,7 +525,14 @@
 			<div class="row">
 				<div class="col-12">
 					<h3 class="display-3 mb-md-4 ms-3 text-center animated text-slide-in">CONTACT US</h3>
-					{% include "@::templates/components/form.twig" %}
+					{% include "@::templates/components/form.twig" with {
+						name: 'YOUR NAME',
+						emailAddress: 'EMAIL ADDRESS',
+						mobileNumber: 'YOUR MOBILE NO.',
+						subject: 'SUBJECT',
+						message: 'TYPE YOUR MESSAGE HERE',
+						ctaLabel: 'Send Message'
+					}%}
 				</div>
 			</div>
 		</div>
