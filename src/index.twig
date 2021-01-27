@@ -1,6 +1,6 @@
 {% extends "@::templates/_layout.twig" %}
 
-
+{% set hideForms = true %}
 {% block navigation %}
 	{% set navModel = {
 		links: [
@@ -15,7 +15,7 @@
 			link: '#contactUs'
 		}
 	} %}
-	{% include "@::templates/components/navbar.twig" with { model: navModel } %}
+	{% include "@::templates/components/navbar.twig" with { model: navModel, hideForms } %}
 {% endblock %}
 {% block main %}
 
@@ -524,7 +524,8 @@
 				phoneLabel: 'Mobile No.',
 				emailLabel: 'Email',
 				sendButtonLabel: 'Send'
-			}
+			},
+			hideForms
 		} %}
 	</section>
 
@@ -547,7 +548,7 @@
 		</div>
 	</section>
 
-	<section class="py-5 border-top" id="contactUs">
+	<section class="py-5 border-top{{ hideForms ? ' d-none' }}" id="contactUs">
 		<div class="container">
 			<div class="row">
 				<div class="col-12">
