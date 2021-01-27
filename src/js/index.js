@@ -11,7 +11,7 @@ import "./components/carousel/carousel.partners";
 import "./components/card";
 import "./components/scrollspy";
 import "./components/navbar";
-
+import "./components/become-associate-form";
 
 if (module.hot) {
     module.hot.accept()
