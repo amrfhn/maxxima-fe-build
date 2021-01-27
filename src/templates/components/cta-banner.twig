@@ -5,10 +5,10 @@
 			<h2 class="animated text-slide-in">{{ title }}</h2>
 		</div>
 		<div class="banner-cta mt-3">
-			<a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">{{ ctaLabel }}</a>
+			<a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#careerModal">{{ ctaLabel }}</a>
 		</div>
 		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="careerModal" tabindex="-1" aria-labelledby="careerModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-gray-200 py-4 px-3">
 					<div class="modal-header d-block">
@@ -28,6 +28,8 @@
 											class="form-control"
 											placeholder=""
 											autocomplete="">
+										<small class="invalid-text text-red d-none">*This field is invalid</small>
+
 									</div>
 								</div>
 								<div class="col-md-3 mb-4 g-2">
@@ -39,6 +41,7 @@
 											class="form-control"
 											placeholder=""
 											autocomplete="">
+										<small class="invalid-text text-red d-none">*This field is invalid</small>
 									</div>
 								</div>
 								<div class="col-md-3 mb-4 g-2">
@@ -50,6 +53,7 @@
 											class="form-control"
 											placeholder=""
 											autocomplete="">
+										<small class="invalid-text text-red d-none">*This field is invalid</small>
 									</div>
 								</div>
 								<div class="d-flex justify-content-end">
