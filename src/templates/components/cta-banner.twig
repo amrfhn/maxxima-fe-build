@@ -17,13 +17,13 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body pt-0 px-4">
-						<form id="careerForm" action="/api/become-associate-form/submissions" method="GET" novalidate class="career-form">
+						<form id="careerForm" action="/api/become-associate-form/submissions" method="GET" novalidate class="career-form form-container">
 							<div class="row">
 								<div class="col-md-6 mb-4 g-2">
 									<div class="field variant-text">
-										<label for="name" class="form-label lead">{{ modalModel.nameLabel }}</label>
-										<input id="name"
-											name="name"
+										<label for="fullName" class="form-label lead">{{ modalModel.nameLabel }}</label>
+										<input id="fullName"
+											name="fullName"
 											type="text"
 											class="form-control"
 											placeholder=""
@@ -64,8 +64,11 @@
 								<div class="d-flex justify-content-end">
 									<button class="btn btn-outline-primary variant-large px-5" type="submit">{{ modalModel.sendButtonLabel }}</button>
 								</div>
-							</form>
-						</div>
+							</div>
+							<div class="thank-you-container gray-200">
+								<p class="h4">{{ modalModel.thankYou }}</p>
+							</div>
+						</form>
 					</div>
 				</div>
 			</div>
