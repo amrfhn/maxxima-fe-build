@@ -1,13 +1,21 @@
-import { validateField, validateFormFields } from "./forms/validations";
+import { validateField, validateFormFields } from "./validations";
 
 $(function () {
     const $form = $('form#becomeAssociateForm');
     if ($form.length === 0) return;
 
+    const $formGeneralError = $form.find('.form-general-error');
+    const $submit = $form.find('button[type=submit]');
     const action = $form.attr('action');
     const method = $form.attr('method');
 
-    $form.find('input:not([type=radio]):not([type=file]), textarea')
+    $form.find('input, select, textarea')
+        .one('blur', function () {
+            $(this).addClass('touched');
+        })
+        .one('input', function () {
+            $(this).addClass('dirty');
+        })
         .one('change', function () {
             validateField($(this));
             $(this).on('input', function () {
@@ -18,6 +26,8 @@ $(function () {
     $form.on('submit', function (e) {
         e.preventDefault();
 
+        $formGeneralError.addClass('d-none');
+
         if (!$form.hasClass('has-submit')) {
             // we wanna go into eager validation mode
             // where on each input, we run the validation
@@ -27,9 +37,7 @@ $(function () {
 
         const isValid = validateFormFields($(this));
         if (!isValid) {
-            const $invalidInputs = $(this).find('input:not(.valid):not([type=radio]), .is-invalid');
-            $invalidInputs.add($(this).find('input[type=file].is-invalid').parent())
-            const $firstError = $invalidInputs.first();
+            const $firstError = $(this).find('input:not(.valid), select:not(.valid)').first();
             const headerHeight = $('header').height();
             window.scrollTo({ top: $firstError.parent().offset().top - headerHeight, behavior: 'smooth' })
             return;
@@ -47,12 +55,15 @@ $(function () {
         $.ajax({
             method,
             url: action,
-            data: JSON.stringify(formData),
+            data: formData,
             contentType: 'application/json'
         }).done(data => {
             // go to thank you
+            $form.addClass('submit-success');
         }).fail(error => {
             // show user
+            $formGeneralError.removeClass('d-none');
+            $submit.attr('disabled', false);
         })
     })
 })

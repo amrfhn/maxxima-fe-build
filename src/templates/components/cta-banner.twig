@@ -17,7 +17,7 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body pt-0 px-4">
-						<form id="becomeAssociateForm" action="https://maxxima.my/api/become-associate-form/submissions?fullName=Arif&mobileNumber=+60196466422&email=test@test.com" method="POST" novalidate class="career-form">
+						<form id="becomeAssociateForm" action="/api/become-associate-form/submissions" method="POST" novalidate class="career-form">
 							<div class="row">
 								<div class="col-md-6 mb-4 g-2">
 									<div class="field variant-text">
@@ -27,7 +27,8 @@
 											type="text"
 											class="form-control"
 											placeholder=""
-											autocomplete="">
+											autocomplete=""
+											required>
 										<small class="invalid-text text-red d-none">*This field is invalid</small>
 
 									</div>
@@ -40,7 +41,8 @@
 											type="text"
 											class="form-control"
 											placeholder=""
-											autocomplete="">
+											autocomplete=""
+											required>
 										<small class="invalid-text text-red d-none">*This field is invalid</small>
 									</div>
 								</div>
@@ -52,10 +54,14 @@
 											type="text"
 											class="form-control"
 											placeholder=""
-											autocomplete="">
+											autocomplete=""
+											required>
 										<small class="invalid-text text-red d-none">*This field is invalid</small>
 									</div>
 								</div>
+								<p class="text-center text-danger d-none form-general-error">
+									<small>Sorry, an error has occurred. Please try again later.</small>
+								</p>
 								<div class="d-flex justify-content-end">
 									<button class="btn btn-outline-primary variant-large px-5" type="submit">{{ modalModel.sendButtonLabel }}</button>
 								</div>
