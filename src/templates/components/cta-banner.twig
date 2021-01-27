@@ -5,10 +5,10 @@
 			<h2 class="animated text-slide-in">{{ title }}</h2>
 		</div>
 		<div class="banner-cta mt-3{{ hideForms ? ' d-none' }}">
-			<a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#exampleModal">{{ ctaLabel }}</a>
+			<a href="#" class="btn btn-secondary" data-bs-toggle="modal" data-bs-target="#careerModal">{{ ctaLabel }}</a>
 		</div>
 		<!-- Modal -->
-		<div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+		<div class="modal fade" id="careerModal" tabindex="-1" aria-labelledby="careerModalLabel" aria-hidden="true">
 			<div class="modal-dialog modal-lg modal-dialog-centered">
 				<div class="modal-content bg-gray-200 py-4 px-3">
 					<div class="modal-header d-block">
@@ -17,7 +17,7 @@
 						<button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
 					</div>
 					<div class="modal-body pt-0 px-4">
-						<form id="careerForm" action="" method="POST" novalidate class="career-form">
+						<form id="careerForm" action="/api/become-associate-form/submissions" method="GET" novalidate class="career-form">
 							<div class="row">
 								<div class="col-md-6 mb-4 g-2">
 									<div class="field variant-text">
@@ -27,18 +27,22 @@
 											type="text"
 											class="form-control"
 											placeholder=""
-											autocomplete="">
+											autocomplete=""
+											data-msg-required="*{{ modalModel.invalidText }}"
+											required>
 									</div>
 								</div>
 								<div class="col-md-3 mb-4 g-2">
 									<div class="field variant-text">
-										<label for="mobileNumber" class="form-label lead">{{ modalModel.phoneLabel }}</label>
+										<label for="mobileNumber" class="form-label lead">*{{ modalModel.phoneLabel }}</label>
 										<input id="mobileNumber"
 											name="mobileNumber"
 											type="text"
 											class="form-control"
 											placeholder=""
-											autocomplete="">
+											autocomplete=""
+											data-msg-required="*{{ modalModel.invalidText }}"
+											required>
 									</div>
 								</div>
 								<div class="col-md-3 mb-4 g-2">
@@ -49,9 +53,14 @@
 											type="text"
 											class="form-control"
 											placeholder=""
-											autocomplete="">
+											autocomplete=""
+											required
+											data-msg-required="*{{ modalModel.invalidText }}">
 									</div>
 								</div>
+								<p class="text-center text-danger d-none form-general-error">
+									<small>Sorry, an error has occurred. Please try again later.</small>
+								</p>
 								<div class="d-flex justify-content-end">
 									<button class="btn btn-outline-primary variant-large px-5" type="submit">{{ modalModel.sendButtonLabel }}</button>
 								</div>
