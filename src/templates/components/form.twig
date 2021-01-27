@@ -10,9 +10,10 @@
                     placeholder=""
                     autocomplete="name"
 					required
-					data-msg-required="*The field is required">
+					data-msg-required="{{ requiredMsg }}">
 			</div>
 		</div>
+
 		<div class="col-md-4 mb-4">
 			<div class="field variant-text">
 				<label for="email" class="form-label lead">{{ emailAddress }}</label>
@@ -22,9 +23,11 @@
                     class="form-control"
                     required 
                     placeholder=""
-                    data-msg-email="*Please enter a valid email">
+					data-msg-required="{{ requiredMsg }}"
+                    data-msg-email="{{ emailMsg }}">
 			</div>
 		</div>
+
 		<div class="col-md-4 mb-4">
 			<div class="field variant-text">
 				<label for="mobileNumber" class="form-label lead">{{ mobileNumber }}</label>
@@ -34,7 +37,9 @@
                     pattern="\d{10,}"
                     class="form-control"
                     placeholder=""
-					required>
+					required
+					data-msg-required="{{ requiredMsg }}"
+					data-msg-pattern="{{ phoneMsg }}">
 			</div>
 		</div>
 
@@ -46,7 +51,8 @@
                     type="text"
                     class="form-control"
                     autocomplete=""
-					required>
+					required
+					data-msg-required="{{ requiredMsg }}">
 			</div>
 		</div>
 
@@ -57,7 +63,8 @@
                 rows="3" 
                 class="form-control"
                 placeholder=""
-				required></textarea>
+				required
+				data-msg-required="{{ requiredMsg }}"></textarea>
 		</div>
 	</div>
 
@@ -67,6 +74,6 @@
 	</div>
 
 	<div class="thank-you-container">
-		<p class="h4">Thank you for your submission</p>
+		<p class="h4">{{ thankYou }}</p>
 	</div>
 </form>
