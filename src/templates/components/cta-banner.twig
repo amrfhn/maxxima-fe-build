@@ -28,22 +28,21 @@
 											class="form-control"
 											placeholder=""
 											autocomplete=""
+											data-msg-required="*{{ modalModel.invalidText }}"
 											required>
-										<small class="invalid-text text-red d-none">*This field is invalid</small>
-
 									</div>
 								</div>
 								<div class="col-md-3 mb-4 g-2">
 									<div class="field variant-text">
-										<label for="mobileNumber" class="form-label lead">{{ modalModel.phoneLabel }}</label>
+										<label for="mobileNumber" class="form-label lead">*{{ modalModel.phoneLabel }}</label>
 										<input id="mobileNumber"
 											name="mobileNumber"
 											type="text"
 											class="form-control"
 											placeholder=""
 											autocomplete=""
+											data-msg-required="*{{ modalModel.invalidText }}"
 											required>
-										<small class="invalid-text text-red d-none">*This field is invalid</small>
 									</div>
 								</div>
 								<div class="col-md-3 mb-4 g-2">
@@ -55,8 +54,8 @@
 											class="form-control"
 											placeholder=""
 											autocomplete=""
-											required>
-										<small class="invalid-text text-red d-none">*This field is invalid</small>
+											required
+											data-msg-required="*{{ modalModel.invalidText }}">
 									</div>
 								</div>
 								<p class="text-center text-danger d-none form-general-error">
