@@ -21,6 +21,13 @@ form {
 			}
 		}
 	}
+	&.career-form {
+		.form-control {
+			&:focus {
+				box-shadow: none;
+			}
+		}
+	}
 }
 
 .form-container {

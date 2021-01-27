@@ -1,7 +1,7 @@
 import { validateField, validateFormFields } from "./validations";
 
 $(function () {
-    const $form = $('form#becomeAssociateForm');
+    const $form = $('form#careerForm');
     if ($form.length === 0) return;
 
     const $formGeneralError = $form.find('.form-general-error');
@@ -38,8 +38,6 @@ $(function () {
         const isValid = validateFormFields($(this));
         if (!isValid) {
             const $firstError = $(this).find('input:not(.valid), select:not(.valid)').first();
-            const headerHeight = $('header').height();
-            window.scrollTo({ top: $firstError.parent().offset().top - headerHeight, behavior: 'smooth' })
             return;
         }
 
