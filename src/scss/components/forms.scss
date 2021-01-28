@@ -55,4 +55,12 @@ form {
 			visibility: visible;
 		}
 	}
+
+	&.career-form {
+		.thank-you-container {
+			background-color: $gray-200;
+			margin-left: -12px;
+			margin-right: -12px;
+		}
+	}
 }
