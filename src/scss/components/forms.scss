@@ -47,9 +47,21 @@ form {
 		visibility: hidden;
 		opacity: 0;
 		transition: .3s ease;
+
+		&.gray-200 {
+			background-color: $gray-200;
+			opacity: .7;
+			margin: 0 -1rem;
+			width: 114%;
+
+			@include media-breakpoint-up (md) {
+				width: 104%;
+			}
+		}
 	}
 
 	&.submit-success {
+		
 		.thank-you-container {
 			opacity: 1;
 			visibility: visible;
