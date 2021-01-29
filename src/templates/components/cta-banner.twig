@@ -19,9 +19,9 @@
 					<div class="modal-body pt-0 px-4">
 						<form id="careerForm" action="/api/become-associate-form/submissions" method="GET" novalidate class="career-form form-container">
 							<div class="row">
-								<div class="col-md-6 mb-4 g-2">
+								<div class="col-md-6 mb-2 g-2">
 									<div class="field variant-text">
-										<label for="fullName" class="form-label lead">{{ modalModel.nameLabel }}</label>
+										<label for="fullName" class="form-label lead">*{{ modalModel.nameLabel }}</label>
 										<input id="fullName"
 											name="fullName"
 											type="text"
@@ -32,7 +32,7 @@
 											required>
 									</div>
 								</div>
-								<div class="col-md-3 mb-4 g-2">
+								<div class="col-md-3 mb-2 g-2">
 									<div class="field variant-text">
 										<label for="mobileNumber" class="form-label lead">*{{ modalModel.phoneLabel }}</label>
 										<input id="mobileNumber"
@@ -45,9 +45,9 @@
 											required>
 									</div>
 								</div>
-								<div class="col-md-3 mb-4 g-2">
+								<div class="col-md-3 mb-2 g-2">
 									<div class="field variant-text">
-										<label for="email" class="form-label lead">{{ modalModel.emailLabel }}</label>
+										<label for="email" class="form-label lead">*{{ modalModel.emailLabel }}</label>
 										<input id="email"
 											name="email"
 											type="text"
@@ -56,6 +56,19 @@
 											autocomplete=""
 											required
 											data-msg-required="*{{ modalModel.invalidText }}">
+									</div>
+								</div>
+								<div class="col-md-6 mb-4 g-2">
+									<div class="field variant-text">
+										<label for="referrer" class="form-label lead">{{ modalModel.referrer }}</label>
+										<input id="fullName"
+											name="referrer"
+											type="text"
+											class="form-control"
+											placeholder=""
+											autocomplete=""
+											data-msg-required="{{ modalModel.invalidText }}"
+											>
 									</div>
 								</div>
 								<p class="text-center text-danger d-none form-general-error">
